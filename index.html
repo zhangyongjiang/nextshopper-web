@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Nextshopper, Discover amazing product around the world.</title>
+    <meta name="description" content="Nextshopper, E-commerce, mobile shopping app " />
+    <meta name="keywords" content="Nextshopper, E-commerce, mobile shopping, IOS, andriod, shopping apps" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/font.css" type="text/css" />
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <!-- Angular -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <!-- translate -->
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+    <!-- App -->
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body id="index" ng-controller="AppCtrl">
+    <!-- header -->
+    <header id="header" class="navbar navbar-fixed-top bg-white-opacity padder-v fa-border">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="btn btn-link visible-xs pull-right m-r" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a href="index.html" class="navbar-brand m-r-lg"><img src="img/logo.png" class="m-r-sm">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav text-base">
+                    <li>
+                        <a href="#index" data-ride="scroll" translate="header.HOME">Home</a>
+                    </li>
+                    <li>
+                        <a href="#why" data-ride="scroll" translate="header.WHY_US">Why us</a>
+                    </li>
+                    <li>
+                        <a href="#features" data-ride="scroll" translate="header.FEATURES">Features</a>
+                    </li>
+                    <li>
+                        <a href="#contact" data-ride="scroll" translate="header.HELP">Help</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href data-toggle="dropdown" class="dropdown-toggle"> <i class="fa w-1x fa-language"></i>{{selectLang}}<b class="caret"></b>
+                        </a>
+                        <!-- dropdown -->
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="(langKey, label) in langs">
+                                <a ng-click="setLang(langKey, $event)" href>{{label}}</a>
+                            </li>
+                        </ul>
+                        <!-- / dropdown -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- / header -->
+    <div id="content" class="bg">
+        <div class="container transparent-bg-only">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-1 text-center">
+                    <div id="cover" class="m-t-xl m-b-xl padder-v">
+                        <h1 class="l-h-1x m-t-xxl padder-v animated fadeInDown text-white" translate="content.DIFFRENT_SHOPPING">Shopping Can Be Different!</h1>
+                        <h4 class=" font-thin l-h-1x animated fadeInDown text-white m-b-xxl" translate="content.DISCOVER_PRODUCTS">Discover the most amazing product around the world.</h4>
+
+                        <a href="#" target="_blank" class="text-sm btn btn-lg btn-rounded btn-default m-sm">
+                            <i class="fa fa-apple fa-3x pull-left m-l-sm"></i>
+                            <span class="block clear m-t-xs text-left m-r m-l">
+                                <span translate="content.AVAILABLE_ON">Available on the</span>
+                            <b class="text-lg block font-bold" translate="content.APP_STORE">App Store</b>
+                            </span>
+                        </a>
+                        <a href="index.html" target="_blank" class="text-sm btn btn-lg btn-rounded btn-default disabled m-sm">
+                            <i class="fa fa-android fa-3x pull-left m-l-sm"></i>
+                            <span class="block clear m-t-xs text-left m-r m-l">
+                                <span translate="content.COMING_SOON">Coming soon on </span>
+                            <b class="text-lg block font-bold" translate="content.GOOGLE_PLAY">Google Play</b>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-5 text-center">
+                    <img class="mobile-image" style="width: 90% !important;" src="img/Berry_hand.png" alt="Mobile Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="why" class="bg-light">
+        <div class="container">
+            <div class="m-t-xl m-b-xl text-center wrapper">
+                <h1 class="text-black font-thin" translate="content.WHY_NEXTSHOPPER">Why Nextshopper?</h1>
+            </div>
+            <div class="row m-t-xl m-b-xl text-center">
+                <div class="col-sm-4">
+                    <p class="h3 m-b-xl inline b b-dark rounded wrapper-lg">
+                        <i class="fa w-1x icon-globe"></i>
+                    </p>
+                    <div class="m-b-xl">
+                        <h4 class="m-t-none" translate="content.AMAZING_PRODUCT">Amazing Product</h4>
+                        <p class="text-muted m-t-lg" translate="content.AMAZING_PRODUCT_TEXT">Lorem ipsum dolor sit amet, vix solum assum te, ei pro fuisset interpretaris, vis id suas utinam quodsi. An zril noster numquam sea, cu sit oblique accommodare. Ullum liber deterruisset ut vel. Maiestatis adversarium deterruisset ut mei. Mei ad sumo maiorum. In mei mucius melius.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <p class="h3 m-b-xl inline b b-dark rounded wrapper-lg">
+                        <i class="fa w-1x icon-tag"></i>
+                    </p>
+                    <div class="m-b-xl">
+                        <h4 class="m-t-none" translate="content.INCREDIBLE_PRICE">Incredible Price</h4>
+                        <p class="text-muted m-t-lg" translate="content.INCREDIBLE_PRICE_TEXT">Lorem ipsum dolor sit amet, vix solum assum te, ei pro fuisset interpretaris, vis id suas utinam quodsi. An zril noster numquam sea, cu sit oblique accommodare. Ullum liber deterruisset ut vel. Maiestatis adversarium deterruisset ut mei. Mei ad sumo maiorum. In mei mucius melius.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <p class="h3 m-b-xl inline b b-dark rounded wrapper-lg">
+                        <i class="fa w-1x fa-chain"></i>
+                    </p>
+                    <div class="m-b-xl">
+                        <h4 class="m-t-none" translate="content.NEW_BRAND_EVERYDAY">New Brand Everyday</h4>
+                        <p class="text-muted m-t-lg" translate="content.NEW_BRAND_EVERYDAY_TEXT">Lorem ipsum dolor sit amet, vix solum assum te, ei pro fuisset interpretaris, vis id suas utinam quodsi. An zril noster numquam sea, cu sit oblique accommodare. Ullum liber deterruisset ut vel. Maiestatis adversarium deterruisset ut mei. Mei ad sumo maiorum. In mei mucius melius.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="features" class="bg-white-only">
+        <div class="container">
+            <div class="row m-t-xl m-b-xxl">
+                <div class="col-md-6">
+                    <img src="img/iphone6.png"> </div>
+                <div class="col-sm-6 wrapper-l">
+                    <h1 class="text-dark font-thin m-b-lg" translate="content.FEATURES">Features</h1>
+                    <ul class="list-unstyled  m-t-xl">
+                        <li>
+                            <i class="icon-check pull-left text-lg m-r m-t-xs"></i>
+                            <p class="clear m-b-lg text-md">
+                                <strong translate="content.BUYER_PROTECTION">Buyer Protection</strong>,
+                                <span translate="content.BUYER_PROTECTION_TEXT">
+                                    Nextshopper always stand behind our customers, Get your items or get your money back!
+                                </span>
+                            </p>
+                        </li>
+                        <li>
+                            <i class="icon-check pull-left text-lg m-r m-t-xs"></i>
+                            <p class="clear m-b-lg text-md">
+                                <strong translate="content.FREE_SHIPPING">Free Shipping</strong>,
+                                <span translate="content.FREE_SHIPPING_TEXT">
+                                    Yup! It’s free! Sellers on nextshopper are required to provide free shipping, so no more shipping fee!
+                                </span>
+                            </p>
+                        </li>
+                        <li>
+                            <i class="icon-check pull-left text-lg m-r m-t-xxs"></i>
+                            <p class="clear m-b-lg text-md">
+                                <strong translate="content.HASSLE_FREE_RETURN">Hassle Free Return</strong>,
+                                <span translate="content.HASSLE_FREE_RETURN_TEXT">
+                                    Don’t like it? No problem! You can return it for free. 
+                                </span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="bg-light">
+        <div class="container">
+            <div class="row m-t-xl m-b-xxl">
+                <div class="col-sm-6 wrapper-l">
+                    <h1 class="text-black font-thin m-b-lg" translate="content.HAVE_QUESTION">Have a Question?</h1>
+                    <p class="text-md" translate="content.HAVE_QUESTION_TEXT1">
+                        Nextshopper offer 100% customer satisfaction guarantee. This commitment streamlines our customer service processes, making them user friendly and worry free!
+                    </p>
+                    <p class="text-md">
+                        <span translate="content.HAVE_QUESTION_TEXT2">Our</span>
+                        <a href="faq_customer.html" translate="content.FAQ"> FAQ </a>
+                        <span translate="content.HAVE_QUESTION_TEXT3">will be able to answer most of your questions, or you can simply send us a message via contact form! </span>
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h4 class="m-b-md" translate="content.CONTACT_US">Contact Us</h4>
+                            <form role="form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="{{ 'content.YOUR_NAME' | translate }}">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="{{ 'content.EMAIL_ADDRESS' | translate }}">
+
+                                </div>
+                                <div class="form-group">
+                                    <textarea rows="6" class="form-control" placeholder="{{ 'content.MESSAGE' | translate }}"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-default pull-right"><span class="text-bold" translate="content.SEND">Send</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="bg-light dk">
+            <div class="container">
+                <div class="row padder-v m-t">
+                    <div class="col-xs-7">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="about.html" translate="footer.ABOUT_US">About Us</a>
+                            </li>
+                            <li>
+                                <a href="faq_customer.html" translate="footer.FAQ">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="buyer_protection.html" translate="footer.BUYER_PROTECTION_PROGRAM">Buyer Protection Program</a>
+                            </li>
+                            <li>
+                                <a href="return_refund.html" translate="footer.RETURN_POLICY">Return &amp; Refund Policy</a>
+                            </li>
+                            <li>
+                                <a href="merchant.html" class="text-base font-bold" translate="footer.SELL_ON_NEXTSHOPPER">Sell on Nextshopper?</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-xs-5 text-right">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="term.html" translate="footer.TERM_OF_USE">Term of Use</a>
+                            </li>
+                            <li>
+                                <a href="privacy.html" translate="footer.PRIVACY_POLICY">Privacy Policy</a>
+                            </li>
+                            <li translate="footer.COPYRIGHT"> Nextshopper Inc. &copy; 2015</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- / footer -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jquery_appear/jquery.appear.js"></script>
+    <script src="js/landing.js"></script>
+</body>
+
+</html>
