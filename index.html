@@ -6,7 +6,6 @@
     <title>Nextshopper, Discover amazing product around the world.</title>
     <meta name="description" content="Nextshopper, E-commerce, mobile shopping app " />
     <meta name="keywords" content="Nextshopper, E-commerce, mobile shopping, IOS, andriod, shopping apps" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" type="text/css" />
@@ -42,8 +41,9 @@
                         <a href="#contact" data-ride="scroll" translate="header.HELP">Help</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">                                    <li>
-                <a href="#" target="_blank" class="btn btn-rounded btn-xs m-sm btn-danger" style="padding:5px 10px"> Download App </a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" target="_blank" class="btn btn-rounded btn-xs m-sm btn-danger" style="padding:5px 10px"> Download App </a>
                     </li>
                     <li><a href="merchant.html" class="text-base font-bold">Become a seller?</a>
                     </li>
@@ -59,7 +59,6 @@
                     <div id="cover" class="m-t-xl m-b-xl padder-v">
                         <h1 class="l-h-1x m-t-xxl padder-v animated fadeInDown text-white" translate="content.DIFFRENT_SHOPPING">Shopping Can Be Different!</h1>
                         <h4 class=" font-thin l-h-1x animated fadeInDown text-white m-b-xxl" translate="content.DISCOVER_PRODUCTS">Discover the most amazing product around the world.</h4>
-
                         <a href="#" target="_blank" class="text-sm btn btn-lg btn-rounded btn-default m-sm">
                             <i class="fa fa-apple fa-3x pull-left m-l-sm"></i>
                             <span class="block clear m-t-xs text-left m-r m-l">
@@ -87,8 +86,8 @@
                     </p>
                     <div class="m-b-xl">
                         <h4 class="m-t-none" translate="content.AMAZING_PRODUCT">Amazing Product</h4>
-                        <p class="m-t-lg">We deliver exciting new products  straight to your phone everyday. From fashion to electronics,  you&rsquo;ll find everything you love, all in one place! </p>
-<p class="text-muted m-t-lg" translate="content.AMAZING_PRODUCT_TEXT">.</p>
+                        <p class="m-t-lg">We deliver exciting new products straight to your phone everyday. From fashion to electronics, you&rsquo;ll find everything you love, all in one place! </p>
+                        <p class="text-muted m-t-lg" translate="content.AMAZING_PRODUCT_TEXT">.</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -107,7 +106,6 @@
                     <div class="m-b-xl">
                         <h4 class="m-t-none" translate="content.NEW_BRAND_EVERYDAY">Guaranteed Quality</h4>
                         <p class="m-t-lg" translate="content.NEW_BRAND_EVERYDAY_TEXT">We work closely with sellers to ensure you get only the highest quality products. And in the rare case your purchase doesn’t meet your standards, we’ll give you your money back, no questions asked!</p>
-
                     </div>
                 </div>
             </div>
@@ -144,7 +142,7 @@
                             <p class="clear m-b-lg text-md">
                                 <strong translate="content.HASSLE_FREE_RETURN">Hassle Free Return</strong>,
                                 <span translate="content.HASSLE_FREE_RETURN_TEXT">
-                                    Don’t like it? No problem! You can return it for free. 
+                                    Don’t like it? No problem! You can return it for free.
                                 </span>
                             </p>
                         </li>
@@ -159,7 +157,7 @@
                 <div class="col-sm-6 wrapper-l">
                     <h1 class="text-black font-thin m-b-lg" translate="content.HAVE_QUESTION">Have a Question?</h1>
                     <p class="text-md" translate="content.HAVE_QUESTION_TEXT1">
-We’re working hard on making NextShopper the best shopping experience on your phone. If you have a question, query or comment not covered by the
+                        We’re working hard on making NextShopper the best shopping experience on your phone. If you have a question, query or comment not covered by the
                         <a href="faq_customer.html" translate="content.FAQ"> FAQ </a>,
                         <span translate="content.HAVE_QUESTION_TEXT3"> just drop us a line and we’ll be in touch shortly. </span>
                     </p>
@@ -168,18 +166,22 @@ We’re working hard on making NextShopper the best shopping experience on your 
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <h4 class="m-b-md" translate="content.CONTACT_US">Contact Us</h4>
-                            <form role="form">
+                            <div id="errorMessage" class="alert alert-warning" style="display: none"></div>
+                            <div id="successMessage" class="alert alert-success" style="display: none"></div>
+                            <form role="form" id="contactUs" class="form-validation" method="post">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name">
+                                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="your Email address">
-
+                                    <input type="email" id="email" class="form-control" placeholder="your Email address" required>
                                 </div>
                                 <div class="form-group">
-                                    <textarea rows="6" class="form-control" placeholder="your Message"></textarea>
+                                    <input type="text" id="subject" class="form-control" placeholder="your Subject" required>
                                 </div>
-                                <button type="submit" class="btn btn-sm btn-default pull-right"><span class="text-bold" translate="content.SEND">Send</span>
+                                <div class="form-group">
+                                    <textarea rows="6" id="message" class="form-control" placeholder="your Message" required></textarea>
+                                </div>
+                                <button type="submit" id="submit" class="btn btn-sm btn-default pull-right"><span class="text-bold" translate="content.SEND">Send</span>
                                 </button>
                             </form>
                         </div>
@@ -210,7 +212,6 @@ We’re working hard on making NextShopper the best shopping experience on your 
                             <li>
                                 <a href="merchant.html" class="text-base font-bold" translate="footer.SELL_ON_NEXTSHOPPER">Sell on Nextshopper?</a>
                             </li>
-
                         </ul>
                     </div>
                     <div class="col-xs-5 text-right">
