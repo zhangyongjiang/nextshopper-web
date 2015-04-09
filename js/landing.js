@@ -44,7 +44,7 @@ jQuery.extend(jQuery.easing, {
                 .after('<img src="img/ajax-loader.gif" class="loader pull-right" />')
                 .attr('disabled', 'disabled');
             var data = {
-                'name': jQuery('#name').val(),
+                'userName': jQuery('#name').val(),
                 'from': jQuery('#email').val(),
                 'subject': jQuery('#subject').val(),
                 'content': jQuery('#message').val()
