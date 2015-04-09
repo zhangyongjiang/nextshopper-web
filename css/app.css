@@ -700,8 +700,8 @@ body {
 }
 .navbar-brand img {
     display: inline;
-    max-height: 45px;
-    margin-top: 0px;
+    max-height: 40px;
+    margin-top: 5px;
     vertical-align: middle;
 }
 @media (min-width: 768px) {
