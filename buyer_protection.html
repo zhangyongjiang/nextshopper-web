@@ -1,4 +1,5 @@
-G<!DOCTYPE html>
+G
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +7,6 @@ G<!DOCTYPE html>
     <title>Nextshopper, Discover amazing product around the world.</title>
     <meta name="description" content="Nextshopper, E-commerce, mobile shopping app " />
     <meta name="keywords" content="Nextshopper, E-commerce, mobile shopping, IOS, andriod, shopping apps" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" type="text/css" />
@@ -16,8 +16,7 @@ G<!DOCTYPE html>
     <link rel="stylesheet" href="css/app.css" type="text/css" />
 </head>
 
-<body id="privacy"  class="bg-light">
-
+<body id="privacy" class="bg-light">
     <!-- header -->
     <header id="header" class="navbar navbar-fixed-top bg-white-opacity padder-v fa-border">
         <div class="container">
@@ -29,7 +28,8 @@ G<!DOCTYPE html>
                 </a>
             </div>
             <div class="collapse navbar-collapse">
-              <ul class="nav navbar-nav navbar-right">                                    <li><a href="#" target="_blank" class="btn btn-rounded btn-default btn-xs m-sm btn-danger" style="padding:5px 10px"> Download App </a></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><button type="button" class="btn btn-rounded btn-xs m-sm btn-danger" style="padding:5px 10px">Download App </button></li>
                     <li><a href="merchant.html" class="text-base font-bold">Become a seller?</a>
                     </li>
                 </ul>
@@ -38,81 +38,82 @@ G<!DOCTYPE html>
     </header>
     <!-- / header -->
     <div id="content">
-    <div class="container m-t-xxl m-b-xxl">
+        <div class="container m-t-xxl m-b-xxl">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1  bg-white-only padder-v padder-lg">
                     <h1 class="text-center m-b-lg">Nextshopper Buyer Protection Guarantee</h1>
-<div class=" m-b-lg">  
-<strong>Get item your ordered or full refund.</strong>
-<p>You will get a full refund if your order does not arrive.</p>
-
-<strong>efund or Keep items not as described</strong>
-<p>If your item is significantly different from the seller’s original product description, you can return the product for a full refund or can choose to get a partial refund and keep the product.</p>
-</div>
-<div class=" m-b-lg">  
-<h4>How does Buyer Protection work?</h4>
-<p>1.	Contact the Seller to resolve the issue. Most sellers are happy to quickly resolve any issues.</p>
-<p>2.	Contact us if you are not satisfied with the seller’s solutions. Our support team will help you.</p></div>
-
-<div class="col-md-12">
+                    <div class=" m-b-lg">
+                        <strong>Get item your ordered or full refund.</strong>
+                        <p>You will get a full refund if your order does not arrive.</p>
+                        <strong>efund or Keep items not as described</strong>
+                        <p>If your item is significantly different from the seller’s original product description, you can return the product for a full refund or can choose to get a partial refund and keep the product.</p>
+                    </div>
+                    <div class=" m-b-lg">
+                        <h4>How does Buyer Protection work?</h4>
+                        <p>1. Contact the Seller to resolve the issue. Most sellers are happy to quickly resolve any issues.</p>
+                        <p>2. Contact us if you are not satisfied with the seller’s solutions. Our support team will help you.</p>
+                    </div>
+                    <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-body">
-                               <h4 class="m-b-md">Contact Nextshopper</h4>
-                                <form role="form">
+                                <h4 class="m-b-md">Contact Nextshopper</h4>
+                                <div id="errorMessage" class="alert alert-warning" style="display: none"></div>
+                                <div id="successMessage" class="alert alert-success" style="display: none"></div>
+                                <form role="form" id="contactUs" class="form-validation" method="post">
                                     <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Your Name">
+                                        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
                                     </div>
                                     <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Email Address" >
-
+                                        <input type="email" id="email" class="form-control" placeholder="your Email address" required>
                                     </div>
-
                                     <div class="form-group">
-                                        <textarea rows="6" class="form-control" placeholder="Message"></textarea>
+                                        <input type="text" id="subject" class="form-control" placeholder="your Subject" required>
                                     </div>
-                                    <button type="submit" class="btn btn-sm btn-default pull-right"><span class="text-bold">Send</span>
+                                    <div class="form-group">
+                                        <textarea rows="6" id="message" class="form-control" placeholder="your Message" required></textarea>
+                                    </div>
+                                    <button type="submit" id="submit" class="btn btn-sm btn-default pull-right"><span class="text-bold" translate="content.SEND">Send</span>
                                     </button>
                                 </form>
                             </div>
                         </div>
                     </div>
-              </div>
+                </div>
             </div>
         </div>
-        </div>
-        <!-- footer -->
-        <footer id="footer">
-            <div class="bg-light dk">
-                <div class="container">
-                    <div class="row padder-v m-t">
-                        <div class="col-xs-7">
-                            <ul class="list-inline">
-                             <li><a href="about.html">About Us</a></li>
-                                                    <li><a href="faq_customer.html">FAQ</a></li>
-                                                     <li><a href="buyer_protection.html">Buyer Protection Program</a></li>
-                                                    <li><a href="return_refund.html">Return &amp; Refund Policy</a></li>
-                            <li><a href="merchant.html" class="text-base font-bold">Sell on Nextshopper?</a></li>   
-                              
-                            </ul>
-                        </div>
-                        <div class="col-xs-5 text-right">
-                                                    <ul class="list-inline">
-                                <li><a href="term.html">Term of Use</a>
-                                </li>
-                                <li><a href="privacy.html">Privacy Policy</a>
-                                </li>
-                           
-                           <li> Nextshopper Inc. &copy; 2015</li> </ul>
-                        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="bg-light dk">
+            <div class="container">
+                <div class="row padder-v m-t">
+                    <div class="col-xs-7">
+                        <ul class="list-inline">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="faq_customer.html">FAQ</a></li>
+                            <li><a href="buyer_protection.html">Buyer Protection Program</a></li>
+                            <li><a href="return_refund.html">Return &amp; Refund Policy</a></li>
+                            <li><a href="merchant.html" class="text-base font-bold">Sell on Nextshopper?</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-5 text-right">
+                        <ul class="list-inline">
+                            <li><a href="term.html">Term of Use</a>
+                            </li>
+                            <li><a href="privacy.html">Privacy Policy</a>
+                            </li>
+                            <li> Nextshopper Inc. &copy; 2015</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- / footer -->
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="bower_components/jquery_appear/jquery.appear.js"></script>
-        <script src="js/landing.js"></script>
+        </div>
+    </footer>
+    <!-- / footer -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jquery_appear/jquery.appear.js"></script>
+    <script src="js/landing.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,5 @@
-G<!DOCTYPE html>
+G
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +7,6 @@ G<!DOCTYPE html>
     <title>Nextshopper, Discover amazing product around the world.</title>
     <meta name="description" content="Nextshopper, E-commerce, mobile shopping app " />
     <meta name="keywords" content="Nextshopper, E-commerce, mobile shopping, IOS, andriod, shopping apps" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" type="text/css" />
@@ -16,8 +16,7 @@ G<!DOCTYPE html>
     <link rel="stylesheet" href="css/app.css" type="text/css" />
 </head>
 
-<body id="privacy"  class="bg-light">
-
+<body id="privacy" class="bg-light">
     <!-- header -->
     <header id="header" class="navbar navbar-fixed-top bg-white-opacity padder-v fa-border">
         <div class="container">
@@ -29,7 +28,10 @@ G<!DOCTYPE html>
                 </a>
             </div>
             <div class="collapse navbar-collapse">
-              <ul class="nav navbar-nav navbar-right">                                    <li><a href="#" target="_blank" class="btn btn-rounded btn-default btn-xs m-sm btn-danger" style="padding:5px 10px"> Download App </a></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button type="button" class="btn btn-rounded btn-xs m-sm btn-danger" style="padding:5px 10px">Download App </button>
+                    </li>
                     <li><a href="merchant.html" class="text-base font-bold">Become a seller?</a>
                     </li>
                 </ul>
@@ -42,80 +44,80 @@ G<!DOCTYPE html>
             <div class="row">
                 <div class="col-md-10 col-md-offset-1  bg-white-only padder-v padder-lg">
                     <h1 class="text-center m-b-lg">Return &amp; Refund Policy</h1>
-  <div class=" m-b-lg">                    
-          <p>          Nextshopper is a marketplace that promise 100% buyer satisfaction.  In order to protect our buyers, Nextshopper requires sellers to accept returns. 
-You may return the item within 15 days after you receive the product, your item must be in its original unused condition, unless there is a manufacturer defect, fake or fails to match the product description.</p>
-<p>It may take 7 business days for a return to fully complete. Refunds are issued based on the payment method used at the time of purchase. And you should receive your refund within 7 business days after return is complete.</p>
-</div>
-<div class=" m-b-lg">  
-<strong>Return Exceptions</strong>
-<p>Some items cannot be returned if they are opened. These include digital media, Perfumes/ Fragrances and underwear/swimming wear.</p>
-<p>Merchandise that has been worn, used, or altered will not be accepted for return or exchange.</p>
-<p>Please do not return any item to the seller without the consent of the seller.</p>
-<p>Buyer will pay for the cost of return shipping.</p>
-<p>Seller and nextshopper does reserve the right to deny refunds for items that are not returned in the same condition they were received</p>
-<p>Although we do our best to facilitate a unique and friendly experience for all users, we would like to stress our encouragement of positive interaction amongst members of our community. Should a dispute arise, please contact us.</p></div>
-
-<div class="col-md-12">
+                    <div class=" m-b-lg">
+                        <p> Nextshopper is a marketplace that promise 100% buyer satisfaction. In order to protect our buyers, Nextshopper requires sellers to accept returns. You may return the item within 15 days after you receive the product, your item must be in its original unused condition, unless there is a manufacturer defect, fake or fails to match the product description.</p>
+                        <p>It may take 7 business days for a return to fully complete. Refunds are issued based on the payment method used at the time of purchase. And you should receive your refund within 7 business days after return is complete.</p>
+                    </div>
+                    <div class=" m-b-lg">
+                        <strong>Return Exceptions</strong>
+                        <p>Some items cannot be returned if they are opened. These include digital media, Perfumes/ Fragrances and underwear/swimming wear.</p>
+                        <p>Merchandise that has been worn, used, or altered will not be accepted for return or exchange.</p>
+                        <p>Please do not return any item to the seller without the consent of the seller.</p>
+                        <p>Buyer will pay for the cost of return shipping.</p>
+                        <p>Seller and nextshopper does reserve the right to deny refunds for items that are not returned in the same condition they were received</p>
+                        <p>Although we do our best to facilitate a unique and friendly experience for all users, we would like to stress our encouragement of positive interaction amongst members of our community. Should a dispute arise, please contact us.</p>
+                    </div>
+                    <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-body">
-                               <h4 class="m-b-md">Contact Nextshopper</h4>
-                                <form role="form">
+                                <h4 class="m-b-md">Contact Nextshopper</h4>
+                                <div id="errorMessage" class="alert alert-warning" style="display: none"></div>
+                                <div id="successMessage" class="alert alert-success" style="display: none"></div>
+                                <form role="form" id="contactUs" class="form-validation" method="post">
                                     <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Your Name">
+                                        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
                                     </div>
                                     <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Email Address" >
-
+                                        <input type="email" id="email" class="form-control" placeholder="your Email address" required>
                                     </div>
-
                                     <div class="form-group">
-                                        <textarea rows="6" class="form-control" placeholder="Message"></textarea>
+                                        <input type="text" id="subject" class="form-control" placeholder="your Subject" required>
                                     </div>
-                                    <button type="submit" class="btn btn-sm btn-default pull-right"><span class="text-bold">Send</span>
+                                    <div class="form-group">
+                                        <textarea rows="6" id="message" class="form-control" placeholder="your Message" required></textarea>
+                                    </div>
+                                    <button type="submit" id="submit" class="btn btn-sm btn-default pull-right"><span class="text-bold" translate="content.SEND">Send</span>
                                     </button>
                                 </form>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
-        </div></div>
-        <!-- footer -->
-        <footer id="footer">
-            <div class="bg-light dk">
-                <div class="container">
-                    <div class="row padder-v m-t">
-                        <div class="col-xs-7">
-                            <ul class="list-inline">
-                             <li><a href="about.html">About Us</a></li>
-                                                    <li><a href="faq_customer.html">FAQ</a></li>
-                                                     <li><a href="buyer_protection.html">Buyer Protection Program</a></li>
-                                                    <li><a href="return_refund.html">Return &amp; Refund Policy</a></li>
-                            <li><a href="merchant.html" class="text-base font-bold">Sell on Nextshopper?</a></li>   
-                              
-                            </ul>
-                        </div>
-                        <div class="col-xs-5 text-right">
-                                                    <ul class="list-inline">
-                                <li><a href="term.html">Term of Use</a>
-                                </li>
-                                <li><a href="privacy.html">Privacy Policy</a>
-                                </li>
-                           
-                           <li> Nextshopper Inc. &copy; 2015</li> </ul>
-                        </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="bg-light dk">
+            <div class="container">
+                <div class="row padder-v m-t">
+                    <div class="col-xs-7">
+                        <ul class="list-inline">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="faq_customer.html">FAQ</a></li>
+                            <li><a href="buyer_protection.html">Buyer Protection Program</a></li>
+                            <li><a href="return_refund.html">Return &amp; Refund Policy</a></li>
+                            <li><a href="merchant.html" class="text-base font-bold">Sell on Nextshopper?</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-5 text-right">
+                        <ul class="list-inline">
+                            <li><a href="term.html">Term of Use</a>
+                            </li>
+                            <li><a href="privacy.html">Privacy Policy</a>
+                            </li>
+                            <li> Nextshopper Inc. &copy; 2015</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- / footer -->
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="bower_components/jquery_appear/jquery.appear.js"></script>
-        <script src="js/landing.js"></script>
+        </div>
+    </footer>
+    <!-- / footer -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jquery_appear/jquery.appear.js"></script>
+    <script src="js/landing.js"></script>
 </body>
 
 </html>

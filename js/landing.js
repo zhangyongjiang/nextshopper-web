@@ -39,10 +39,16 @@ jQuery.extend(jQuery.easing, {
         jQuery('#contactUs').submit(function(event) {
             jQuery('#errorMessage').hide();
             event.preventDefault();
+            if (jQuery('#name').val() == "" || jQuery('#email').val() == "" || jQuery('#subject').val() == "" || jQuery('#message').val() == "") {
+                jQuery('#errorMessage').slideToggle('fast');
+                jQuery('#errorMessage').html('Please provide all the fields.');
+                return false;
+            }
             var action = "http://api.nextshopper.com/ws/message/email-us";
             jQuery('#submit')
                 .after('<img src="img/ajax-loader.gif" class="loader pull-right" />')
                 .attr('disabled', 'disabled');
+
             var data = {
                 'userName': jQuery('#name').val(),
                 'from': jQuery('#email').val(),
@@ -67,6 +73,14 @@ jQuery.extend(jQuery.easing, {
                     jQuery('#contactUs img.loader').fadeOut('fast', function() {
                         jQuery(this).remove()
                     });
+                },
+                fail: function() {
+                    jQuery('#errorMessage').slideToggle('fast');
+                    jQuery('#errorMessage').html('Sorry! We are facing some technical problem right now, please try again later.');
+                    jQuery('#contactUs img.loader').fadeOut('fast', function() {
+                        jQuery(this).remove()
+                    });
+                    jQuery('#submit').removeAttr('disabled');
                 }
             });
             return false;
