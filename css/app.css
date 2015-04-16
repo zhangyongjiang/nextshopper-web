@@ -3936,6 +3936,11 @@ a.text-#000000:hover {
     position: relative;
     top: 200px;
 }
+@media (max-width: 900px) {
+    .mobile-image {
+        top: 0px;
+    }
+}
 #merchant .bg {
 background: url("../img/bg3.png")  repeat-x top center;
 }
