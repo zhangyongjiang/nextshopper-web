@@ -3934,6 +3934,7 @@ a.text-#000000:hover {
 }
 .mobile-image {
     position: relative;
+    bottom: -350px;
 	vertical-align:bottom;
 }
 @media (max-width: 900px) {
