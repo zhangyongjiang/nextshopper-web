@@ -250,7 +250,7 @@ a.list-group-item:hover, a.list-group-item:focus, a.list-group-item.hover {
     background-color: #19a9d5;
 }
 .nav > li > a:hover, .nav > li > a:focus {
-   background-color: transparent;
+   background-color: #fff;
 	color:#F33;
 }
 .nav.nav-lg > li > a {
@@ -3954,4 +3954,21 @@ background: url("../img/bg3.png")  repeat-x top center;
 
 .b-red  {
 background-color:#FF6266;
+}
+
+.btn-red {
+  color: #ffffff !important;
+  background-color: #FF6266;
+  border-color: #FF6266;
+   padding:8px;
+}
+.btn-red a { color:white;  padding:8px;}
+.btn-red:hover,
+.btn-red:focus,
+.btn-red:active,
+.btn-red.active,
+.open .dropdown-toggle.btn-red {
+  color: #ffffff !important;
+  background-color: #FB405B;
+  border-color: #FF0D13;
 }
