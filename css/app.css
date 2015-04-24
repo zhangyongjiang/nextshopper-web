@@ -656,6 +656,7 @@ body {
 }
 .navbar {
     margin: 0;
+	font-size:16px;
 }
 .navbar .navbar-form-sm {
     margin-top: 10px;
@@ -2290,7 +2291,7 @@ html {
 }
 .bg-light {
     color: #58666e;
-    background-color: #edf1f2;
+    background-color:#EDEFED;
 }
 .bg-light.lt, .bg-light .lt {
     background-color: #f3f5f6;
@@ -2299,7 +2300,7 @@ html {
     background-color: #f6f8f8;
 }
 .bg-light.dk, .bg-light .dk {
-    background-color: #e4eaec;
+    background-color: #e3e6e3;
 }
 .bg-light.dker, .bg-light .dker {
     background-color: #dde6e9;
@@ -3934,7 +3935,7 @@ a.text-#000000:hover {
 }
 .mobile-image {
     position: relative;
-    bottom: -350px;
+    bottom: -250px;
 	vertical-align:bottom;
 }
 @media (max-width: 900px) {
@@ -3945,4 +3946,12 @@ a.text-#000000:hover {
 #merchant .bg {
 background: url("../img/bg3.png")  repeat-x top center;
 }
+}
+
+.fa-chain {
+  color:#FF6266;
+}
+
+.b-red  {
+background-color:#FF6266;
 }
