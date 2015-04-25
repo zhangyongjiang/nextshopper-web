@@ -11,7 +11,7 @@ body {
     -webkit-font-smoothing: antialiased;
     line-height: 1.42857143;
     color: #58666e;
-    background-color: transparent;
+	    background-color: transparent;
 }
 *:focus {
     outline: 0 !important;
@@ -2300,7 +2300,7 @@ html {
     background-color: #f6f8f8;
 }
 .bg-light.dk, .bg-light .dk {
-    background-color: #e3e6e3;
+    background-color: #e3e3e3;
 }
 .bg-light.dker, .bg-light .dker {
     background-color: #dde6e9;
@@ -2310,7 +2310,7 @@ html {
 }
 .bg-dark {
     color: #a6a8b1;
-    background-color: #3E7BA8;
+    background-color: #ED9134;
 }
 .bg-dark.lt, .bg-dark .lt {
     background-color: #474c5e;
