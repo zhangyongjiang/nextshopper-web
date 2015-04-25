@@ -23,7 +23,7 @@
             <a href="http://themeforest.net/item/angulr-bootstrap-admin-web-app-with-angularjs/8437259">Download</a>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right font-bold">
           <li>
             <div class="m-t-sm">
               <a href="../angular/#/access/signin" class="btn btn-link btn-sm">Sign in</a> or 
