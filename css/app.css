@@ -26,7 +26,7 @@ body {
 	}
 
 a {
-    color: #363f44;
+    color: #ff5a5f;
     text-decoration: none;
     cursor: pointer;
 }
@@ -658,6 +658,9 @@ body {
     margin: 0;
 	font-size:16px;
 }
+
+.navbar a {color:#333;}
+#footer a {color:#333;}
 .navbar .navbar-form-sm {
     margin-top: 10px;
     margin-bottom: 10px;
