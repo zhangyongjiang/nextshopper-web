@@ -875,7 +875,7 @@ body {
     }
 }
 html {
-/*    background: url('../img/bg.jpg');*/
+  background: url('../img/bg3.jpg');
     background-attachment: fixed;
     background-size: cover;
 }
@@ -2291,7 +2291,7 @@ html {
 }
 .bg-light {
     color: #58666e;
-    background-color:#EDEFED;
+    background-color:#eee;
 }
 .bg-light.lt, .bg-light .lt {
     background-color: #f3f5f6;
@@ -2310,7 +2310,7 @@ html {
 }
 .bg-dark {
     color: #a6a8b1;
-    background-color: #3a3f51;
+    background-color: #3E7BA8;
 }
 .bg-dark.lt, .bg-dark .lt {
     background-color: #474c5e;
@@ -3952,7 +3952,7 @@ background: url("../img/bg3.png")  repeat-x top center;
   color:#FF6266;
 }
 
-.b-red  {
+.bg-red  {
 background-color:#FF6266;
 }
 
