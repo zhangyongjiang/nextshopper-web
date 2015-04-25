@@ -44,7 +44,7 @@ jQuery.extend(jQuery.easing, {
                 jQuery('#errorMessage').html('Please provide all the fields.');
                 return false;
             }
-            var action = "http://api.nextshopper.com/ws/message/email-us";
+            var action = "https://api.nextshopper.com/ws/message/email-us";
             jQuery('#submit')
                 .after('<img src="img/ajax-loader.gif" class="loader pull-right" />')
                 .attr('disabled', 'disabled');
