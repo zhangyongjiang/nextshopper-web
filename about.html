@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -13,22 +13,9 @@
     <link rel="stylesheet" href="bower_components/simple-line-icons/css/simple-line-icons.css" type="text/css" />
     <link rel="stylesheet" href="css/font.css" type="text/css" />
     <link rel="stylesheet" href="css/app.css" type="text/css" />
-    <!-- Angular -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/ngstorage/ngStorage.js"></script>
-    <!-- translate -->
-    <script src="bower_components/angular-translate/angular-translate.js"></script>
-    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
-    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
-    <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
-    <!-- App -->
-    <script src="js/app.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/main.js"></script>
 </head>
 
-<body id="aboutus" class="bg-light" ng-controller="AppCtrl">
+<body id="About us" class="bg-light">
     <!-- header -->
        <header id="header" class="navbar navbar-fixed-top bg-white-opacity padder-v fa-border">
         <div class="container">
@@ -55,10 +42,49 @@
     <div id="content" class="bg-light clearfix">
         <div class="container m-t-xxl m-b-xxl">
             <div class="row">
-                <div class="col-md-10 col-md-offset-1  bg-white-only padder-v padder-lg">
-                    <h1 class="text-center m-b-lg text-black" translate="content.ABOUT_US">About Us</h1>
-                    <p>With NextShopper, we’ve turned the shopping model on its head. Instead of retailers, we work directly with sellers to bring you incredible new products every day at steep discounts. From electronics to fashion, we have the widest range of products at prices you’ll love. But that’s not all. We’ve also meticulously built the NextShopper app to deliver the best shopping experience on small screens. Every pixel, every feature has been carefully crafted to deliver maximum delight. NextShopper is what we imagine shopping should be like, and we invite you to be a part of this exciting journey.
-                    </p>
+                <div class="col-md-10 col-md-offset-1  bg-white-only padder-v padder-lg m-b-xl">
+                    <h1 class="text-center m-b-lg text-black">About us</h1>
+                    
+                  <div class=" m-b-xl">
+                        <h3 class="text-black">Over View</h3>
+                        <p>Nextshopper is global shopping market place. You will find fantastic products from each corner of the world everyday, </p>
+                        <p>With NextShopper, we’ve turned the shopping model on its head. Instead of retailers, we work directly with merchants to bring you incredible new products at steep discounts. From electronics to fashion, we have the widest range of products at prices you’ll love.</p>
+                    </div>
+                  <div class=" m-b-xl">
+                    <h3 class="text-black">Our Mobile App</h3>
+                      <p>NextShopper's SmartShop  recommendation engine offers  personalized shopping experiences. It's  built on open source big data processing platform, so we will be able to deliver the right product to you. NextShopper is what we imagine shopping should be like, and we invite you to be a part of this exciting journey.</p>
+                    </div>
+                    <div class=" m-b-xl">
+                    <h3 class="text-black">About Company</h3>
+                      <p class="m-b">We started nextShopper in 2014, based in Silicon Valley.</p>
+                      <p class="m-b-xxl">Contact us if you have more questions.</p>
+                      <div class="col-sm-8">
+                    <div class="panel panel-default  bg-light">
+                        <div class="panel-body">
+                            <h4 class="m-b-md" translate="content.CONTACT_US">Contact Us</h4>
+                            <div id="errorMessage" class="alert alert-warning" style="display: none"></div>
+                            <div id="successMessage" class="alert alert-success" style="display: none"></div>
+                            <form role="form" id="contactUs" class="form-validation" method="post">
+                                <div class="form-group">
+                                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" class="form-control" placeholder="your Email address" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="subject" class="form-control" placeholder="your Subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea rows="6" id="message" class="form-control" placeholder="your Message" required></textarea>
+                                </div>
+                                <button type="submit" id="submit" class="btn btn-sm btn-default pull-right"><span class="text-bold" translate="content.SEND">Send</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -70,32 +96,20 @@
                 <div class="row padder-v m-t">
                     <div class="col-xs-7">
                         <ul class="list-inline">
-                            <li>
-                                <a href="about.html" translate="footer.ABOUT_US">About Us</a>
-                            </li>
-                            <li>
-                                <a href="faq_customer.html" translate="footer.FAQ">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="buyer_protection.html" translate="footer.BUYER_PROTECTION_PROGRAM">Buyer Protection Program</a>
-                            </li>
-                            <li>
-                                <a href="return_refund.html" translate="footer.RETURN_POLICY">Return &amp; Refund Policy</a>
-                            </li>
-                            <li>
-                                <a href="merchant.html" class="text-base font-bold" translate="footer.SELL_ON_NEXTSHOPPER">Sell on Nextshopper?</a>
-                            </li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="faq_customer.html">FAQ</a></li>
+                            <li><a href="buyer_protection.html">Buyer Protection Program</a></li>
+                            <li><a href="return_refund.html">Return &amp; Refund Policy</a></li>
+                            <li><a href="merchant.html" class="text-base font-bold">Sell on Nextshopper?</a></li>
                         </ul>
                     </div>
                     <div class="col-xs-5 text-right">
                         <ul class="list-inline">
-                            <li>
-                                <a href="term.html" translate="footer.TERM_OF_USE">Term of Use</a>
+                            <li><a href="term.html">Term of Use</a>
                             </li>
-                            <li>
-                                <a href="privacy.html" translate="footer.PRIVACY_POLICY">Privacy Policy</a>
+                            <li><a href="privacy.html">Privacy Policy</a>
                             </li>
-                            <li translate="footer.COPYRIGHT"> Nextshopper Inc. &copy; 2015</li>
+                            <li> Nextshopper Inc. &copy; 2015</li>
                         </ul>
                     </div>
                 </div>
