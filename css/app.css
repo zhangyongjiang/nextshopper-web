@@ -878,7 +878,7 @@ body {
     }
 }
 html {
-  background: url('../img/bg4.jpg');
+  background: url('../img/bg3.jpg');
     background-attachment: fixed;
     background-size: cover;
 }
@@ -3378,7 +3378,7 @@ a.text-#000000:hover {
     margin-top: 40px;
 }
 .m-t-xxl {
-    margin-top: 160px;
+    margin-top: 145px;
 }
 .m-t-n-xxs {
     margin-top: -1px;
