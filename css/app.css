@@ -3,14 +3,14 @@
 */
 
 html {
-    background-color: #efefef;
+    background-color: #f5f5f5;
 }
 body {
     font-family:'Open Sans', sans-serif;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
     line-height: 1.42857143;
-    color: #58666e;
+    color: #393939;
 	    background-color: transparent;
 }
 *:focus {
@@ -2293,8 +2293,8 @@ html {
     filter: none;
 }
 .bg-light {
-    color: #58666e;
-    background-color:#eee;
+    color: #484848;
+    background-color:#f5f5f5;
 }
 .bg-light.lt, .bg-light .lt {
     background-color: #f3f5f6;
