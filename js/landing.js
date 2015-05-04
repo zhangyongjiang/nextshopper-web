@@ -85,5 +85,47 @@ jQuery.extend(jQuery.easing, {
             });
             return false;
         });
+
+        jQuery('#invitationCodeForm1, #invitationCodeForm2').submit(function(event) {
+            var data = {};
+            var EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+            if (event.target.id == 'invitationCodeForm1') {
+                if (jQuery('#inviteEmail1').val() == "" || !jQuery('#inviteEmail1').val().match(EMAIL_REGEX)) {
+                    jQuery('#inviteEmail1').css('border', '1px red solid');
+                    return false;
+                } else {
+                    jQuery('#inviteEmail1').css('border', '');
+                    data.from = jQuery('#inviteEmail1').val();
+                }
+            }
+            if (event.target.id == 'invitationCodeForm2') {
+                if (jQuery('#inviteEmail2').val() == "" || !jQuery('#inviteEmail2').val().match(EMAIL_REGEX)) {
+                    jQuery('#inviteEmail2').css('border', '1px red solid');
+                    return false;
+                } else {
+                    jQuery('#inviteEmail2').css('border', '');
+                    data.from = jQuery('#inviteEmail2').val();
+                }
+            }
+            var action = "https://api.nextshopper.com/ws/message/send-invitation-code";
+            jQuery.ajax({
+                url: action,
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function(data) {
+                    if (data.msg && data.msg === 'ok') {
+                        jQuery('#' + event.target.id + '-success').slideToggle('fast');
+                        jQuery('#' + event.target.id).slideUp('medium');
+                    }
+                },
+                fail: function(data) {
+                    jQuery('#' + event.target.id + '-fail').slideToggle('fast');
+                    jQuery('#' + event.target.id).slideUp('medium');
+                }
+            });
+            return false;
+        });
     });
 }(window.jQuery);
