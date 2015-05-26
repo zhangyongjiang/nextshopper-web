@@ -1,4 +1,4 @@
-app.controller('ProductViewController', ['$scope', 'NextShopperProductservice', '$stateParams', '$state', '$filter', '$modal', 'toaster', 'FileUploader', '$translate', '$timeout', function($scope, NextShopperProductservice, $stateParams, $state, $filter, $modal, toaster, FileUploader, $translate, $timeout) {
+app.controller('ProductViewController', ['$scope', 'NextShopperProductservice', '$stateParams', '$state', function($scope, NextShopperProductservice, $stateParams, $state) {
     $scope.product = null;
 
     NextShopperProductservice.getSingleProduct($stateParams.id)

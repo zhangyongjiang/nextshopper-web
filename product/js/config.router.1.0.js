@@ -21,7 +21,7 @@ angular.module('app')
                 $stateProvider
                     .state('product', {
                         abstract: true,
-                        url: '/product',
+                        url: '',
                         templateUrl: 'tpl/app.html',
                         breadcrumb: {
                             displayName: 'Product',

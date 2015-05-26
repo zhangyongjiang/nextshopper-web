@@ -31,28 +31,13 @@ angular.module('app')
                     navbarHeaderColor: 'bg-black',
                     navbarCollapseColor: 'bg-white-only',
                     asideColor: 'bg-black',
-                    headerFixed: false,
+                    headerFixed: true,
                     asideFixed: false,
-                    asideFolded: false,
+                    asideFolded: true,
                     asideDock: false,
                     container: false
                 }
             }
-
-            // save settings to local storage
-            if (angular.isDefined($localStorage.settings)) {
-                $scope.app.settings = $localStorage.settings;
-            } else {
-                $localStorage.settings = $scope.app.settings;
-            }
-            $scope.$watch('app.settings', function() {
-                if ($scope.app.settings.asideDock && $scope.app.settings.asideFixed) {
-                    // aside dock and fixed must set the header fixed.
-                    $scope.app.settings.headerFixed = true;
-                }
-                // save to local storage
-                $localStorage.settings = $scope.app.settings;
-            }, true);
 
             // angular translate
             $scope.lang = {
@@ -82,13 +67,13 @@ angular.module('app')
                 return (/iPhone|iPod|iPad|Silk|Android|BlackBerry|Opera Mini|IEMobile/).test(ua);
             }
 
-            $scope.$on('$viewContentLoaded', function() {
-                if($state.current.name == 'access.signin' ||  $state.current.name == 'access.signup' || $state.current.name == 'access.forgotpwd') {
-                    $scope.loaded = false;    
-                }
-                if($localStorage.userId) {
-                    $scope.loaded = false;
-                }
-            });
+            // $scope.$on('$viewContentLoaded', function() {
+            //     if($state.current.name == 'access.signin' ||  $state.current.name == 'access.signup' || $state.current.name == 'access.forgotpwd') {
+            //         $scope.loaded = false;    
+            //     }
+            //     if($localStorage.userId) {
+            //         $scope.loaded = false;
+            //     }
+            // });
         }
     ]);
