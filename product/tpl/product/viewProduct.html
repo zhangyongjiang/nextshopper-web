@@ -4,7 +4,7 @@
 <!-- toaster directive -->
 <toaster-container toaster-options="{'position-class': 'toast-top-center', 'close-button':true}"></toaster-container>
 <!-- / toaster directive -->
-<div class="wrapper-lg" ng-controller="ProductViewController">
+<div class="wrapper-lg col-md-8 col-md-offset-2" ng-controller="ProductViewController">
     <div class="row bg-white">
         <div class="col-md-6">
             <div class="wrapper-sm">
@@ -39,7 +39,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="row h4 m-t">
+                <div class="row h2 m-t">
                     <div class="col-sm-6 text-danger">
                         {{product.product.salePrice | viewCurrency}}
                         <span>USD</span>
@@ -66,9 +66,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 h4 text-center">
+        <div class="col-md-12 h3 text-center m-t-lg">
             <div class="wrapper-sm">
-                Want to purchase this one?
+                Would you like to see more?
             </div>
         </div>
     </div>
