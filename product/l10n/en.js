@@ -490,7 +490,7 @@
             "PRINT":"Print",
             "CONTACT_SUPPORT_SUCCESS":"Success! Your message has been sent.",
             "NEXTSHOPPER_COPYRIGHT":"Nextshopper Inc. &copy; 2014 - 2015",
-            "TERM_SERVICES":"Term of services",
+            "TERM_SERVICES":"Term Of Services",
             "MERCHANT_AGREEMENT":"Merchant Agreement"
         },
         "toaster":{
