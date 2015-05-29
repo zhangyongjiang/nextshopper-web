@@ -1,263 +1,254 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Nextshopper, Discover amazing product around the world.</title>
-    <meta name="description" content="Nextshopper, E-commerce, mobile shopping app " />
-    <meta name="keywords" content="Nextshopper, E-commerce, mobile shopping, IOS, andriod, shopping apps" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="bower_components/animate.css/animate.css" type="text/css" />
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="bower_components/simple-line-icons/css/simple-line-icons.css" type="text/css" />
-    <link rel="stylesheet" href="css/font.css" type="text/css" />
-    <link rel="stylesheet" href="css/app.css" type="text/css" />
+<meta charset="utf-8" />
+<title>Nextshopper, Discover amazing product around the world.</title>
+<meta name="description" content="Nextshopper, E-commerce, mobile shopping app " />
+<meta name="keywords" content="Nextshopper, E-commerce, mobile shopping, IOS, andriod, shopping apps" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="bower_components/animate.css/animate.css" type="text/css" />
+<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="bower_components/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+<link rel="stylesheet" href="css/font.css" type="text/css" />
+<link rel="stylesheet" href="css/app.css" type="text/css" />
 </head>
 
-<body id="index" ng-controller="AppCtrl">
-    <!-- header -->
-    <header id="header" class="navbar navbar-fixed-top bg-white-opacity padder-v fa-border">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="btn btn-link visible-xs pull-right m-r" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a href="index.html" class="navbar-brand"><img src="img/logo.png" class="m-r-sm">
-                </a>
-            </div>
-            <div class="collapse navbar-collapse font-bold">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#index" data-ride="scroll" translate="header.HOME">Home</a>
+<body id="merchant">
+<!-- header -->
+<header id="header" class="navbar navbar-fixed-top bg-white-opacity padder-v fa-border b-b">
+  <div class="container">
+    <div class="navbar-header font">
+      <button class="btn btn-link visible-xs pull-right m-r" type="button" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fa fa-bars"></i> </button>
+      <a href="index.html" class="navbar-brand"><img src="img/logo.png" class="m-r-sm"> </a> </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right font-bold">
+      <li>
+               <div class="btn btn-rounded m-t-xs btn-red">         <a href="https://seller.nextshopper.com/#/access/signup">Have Invitation Code?</a></div>
                     </li>
-                    <li>
-                        <a href="#why" data-ride="scroll" translate="header.WHY_US">Why us</a>
-                    </li>
-                    <li>
-                        <a href="#features" data-ride="scroll" translate="header.FEATURES">Features</a>
-                    </li>
-                    <li>
-                        <a href="#contact" data-ride="scroll" translate="header.HELP">Help</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right font-bold">
-                    <li>
-               <div class="btn btn-rounded m-t-xs btn-red">         <a>Comming soon!</a></div>
-                    </li>
-                    <li><a href="merchant.html">Become a seller?</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <!-- / header -->
-    <div id="content" class="bg clearfix">
-        <div class="container transparent-bg-only">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-1 text-center">
-                    <div id="cover" class="m-t-xl m-b-xl padder-v" style="height:516px">
-                        <h1 class="l-h-1x m-t-xxl padder-v animated fadeInDown text-white" translate="content.DIFFRENT_SHOPPING">Shopping Can Be Different!</h1>
-                        <h4 class=" font-thin l-h-1x animated fadeInDown text-white m-b-xxl" translate="content.DISCOVER_PRODUCTS">Discover the most amazing product around the world.</h4>
-                        <a href="#" target="_blank" class="text-sm btn btn-lg btn-rounded btn-default m-sm">
-                            <i class="fa fa-apple fa-3x pull-left m-l-sm"></i>
-                            <span class="block clear m-t-xs text-left m-r m-l">
-                                <span translate="content.AVAILABLE_ON">Coming Soon on the</span>
-                            <b class="text-lg block font-bold" translate="content.APP_STORE">App Store</b>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-5 text-center">
-                    <img class="mobile-image" style="width: 90% !important;" src="img/Berry_hand.png" alt="Mobile Image">
-                </div>
-            </div>
-        </div>
+        <li><a href="https://seller.nextshopper.com/">Sign In</a> </li>
+      </ul>
     </div>
-    <div id="why" class="bg-white-only">
-        <div class="container">
-            <div class="m-t-xl m-b-xl text-center wrapper">
-                <h3 class="text-black font-bold" translate="content.WHY_NEXTSHOPPER">Why Nextshopper?</h3>
+  </div>
+</header>
+<!-- / header -->
+<div id="content" class="bg clearfix">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <div id="cover" class="m-t-xl  text-black  m-b-xl padder-v"  style="height:516px">
+        <h3 class="m-t-xxl m-b-xxl font-bold animated fadeInDown">Next Mobile Commerce Platform</h3>
+          <div class="m-b animated fadeInDown">June 1, 2015 - July 31, 2015</div>
+          <h1 class="m-b animated fadeInDown">Sale it for <span class="font-bold text-danger">FREE</span>！</h1>
+                    <p class="m-b-xxl padder-v animated fadeInDown">Details</p>
+          <div>
+            <form role="form" id="invitationCodeForm1" class="form-validation form-inline" method="post">
+              <div class="form-group">
+                <input type="email" id="inviteEmail1" class="form-control input-lg" placeholder="your Email address" required>
+              </div>
+              <button type="submit" class="btn btn-red btn-lg"><span class="text-bold" translate="content.SEND">Get Invitation Code</span> </button>
+            </form>
+            <div class="alert alert-success" id="invitationCodeForm1-success"  style="display:none">
+                We have sent you an email with Invitation code.
             </div>
-            <div class="row m-t-xl m-b-xl text-center">
-                <div class="col-sm-4">
-                    <p class="h3 m-b-xl inline b b-dark rounded wrapper-lg">
-                        <i class="fa w-1x icon-globe"></i>
-                    </p>
-                    <div class="m-b-xl">
-                        <h4 class="m-t-none" translate="content.AMAZING_PRODUCT">Amazing Product</h4>
-                        <p class="m-t-lg">Fantastic products everyday. From fashion to electronics, you&rsquo;ll find everything you love, all in one place! </p>
-                        <p class="text-muted m-t-lg" translate="content.AMAZING_PRODUCT_TEXT">.</p>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <p class="h3 m-b-xl inline b b-dark rounded wrapper-lg">
-                        <i class="fa w-1x icon-tag"></i>
-                    </p>
-                  <div class="m-b-xl">
-                    <h4 class="m-t-none" translate="content.INCREDIBLE_PRICE">Incredible Price</h4>
-                      <p class="m-t-lg" translate="content.INCREDIBLE_PRICE_TEXT">Our products are sold directly by wholesaler,unbeatable price </p>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <p class="h3 m-b-xl inline b b-dark rounded wrapper-lg">
-                        <i class="fa w-1x fa-chain"></i>
-                    </p>
-                    <div class="m-b-xl">
-                        <h4 class="m-t-none" translate="content.NEW_BRAND_EVERYDAY">Quality Guaranteed                        </h4>
-                        <p class="m-t-lg" translate="content.NEW_BRAND_EVERYDAY_TEXT">We work closely with merchants to ensure the quality of products. </p>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="features" class="bg-light">
-        <div class="container">
-            <div class="row m-t-xl m-b-xxl">
-                <div class="col-md-6 text-center" data-ride="animated" data-animation="fadeInLeft" data-delay="300">
-                    <img src="img/iphone6.png" style="height:500px"> </div>
-                <div class="col-sm-6 wrapper-l">
-                
-                    <h3 class="text-black font-bold m-b-lg" translate="content.FEATURES">A Delightful Experience, Every Time.</h3>
-                    <ul class="list-unstyled  m-t-xl">
-                        <li class="m-b-lg ">
-                            <i class="icon-check pull-left text-lg m-r m-t-xs"></i>
-                            <p class="clear text-md">
-                                <strong translate="content.BUYER_PROTECTION">Buyer Protection</strong>,
-                                <span translate="content.BUYER_PROTECTION_TEXT">
-                                    Nextshopper always stand behind our customers, Get your items or get your money back!
-                                </span>
-                            </p>
-                        </li>
-                        
-                        <li  class="m-b-lg">
-                            <i class="icon-check pull-left text-lg m-r m-t-xxs"></i>
-                            <p class="clear text-md">
-                                <strong translate="content.HASSLE_FREE_RETURN">Hassle Free Return</strong>,
-                                <span translate="content.HASSLE_FREE_RETURN_TEXT">
-                                    Don’t like it? No problem! You can return it for free within 15 day after you receive the item.
-                                </span>
-                            </p>                            
-                        </li>
-                        <li>
-                            <i class="icon-check pull-left text-lg m-r m-t-xs"></i>
-                            <p class="clear text-md">
-                                <strong translate="content.SUPPORT">24 hours Support</strong>,
-                                <span translate="content.SUPPORT_TEXT">We are ready to help, contact us and we will get back to you within 24 hours.</span>
-                            </p>
-                        </li>
-                        
-                        <li>
-     
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="download" class="bg-dark">
-    <div class="container">
-        <div class="row m-t-xl m-b-xxl">
-        <div class="col-sm-6 wrapper-lg">
-            <h3 class="text-white font-bold m-b-lg">Are you ready?</h3>
-            <p class="h4 l-h-1x text-white">Nextshopper is a fun place to shop, you will love the things you discovered in our app. Download app now, enjoy your shopping!</p>
-          </div>
-          <div class="col-sm-6">
-            <div class="m-t-xl text-center">
-              <p>
-              <a href="#" target="_blank" class="text-sm btn btn-lg btn-rounded btn-default m-sm">
-                <i class="fa fa-apple fa-3x pull-left m-l-sm"></i>
-                <span class="block clear m-t-xs text-left m-r m-l">Comming soon on the <b class="text-lg block font-bold">App Store</b>
-                </span>
-              </a>
-              </p>
+            <div class="alert alert-danger" id="invitationCodeForm1-fail" style="display:none">
+                Sorry!! We have some technical issue right now. <br/>
+                Please try again later.
             </div>
           </div>
-        </div>
-      </div></div>
-    <div id="contact" class="bg-white-only">
-        <div class="container">
-            <div class="row m-t-xl m-b-xxl">
-                <div class="col-sm-6 wrapper-l">
-                    <h3 class="text-black font-bold m-b-lg" translate="content.HAVE_QUESTION">Have a Question?</h3>
-                    <p class="text-md" translate="content.HAVE_QUESTION_TEXT1">
-                        We’re working hard on making NextShopper the best shopping experience on your phone. If you have a question, query or comment not covered by the
-                       <strong><a href="faq_customer.html" translate="content.FAQ"> FAQ </a></strong>,
-                        <span translate="content.HAVE_QUESTION_TEXT3"> just drop us a line and we’ll be in touch shortly. </span>
-                    </p>
-                </div>
-                <div class="col-sm-6">
-                    <div class="panel panel-default  bg-light">
-                        <div class="panel-body">
-                            <h4 class="m-b-md" translate="content.CONTACT_US">Contact Us</h4>
-                            <div id="errorMessage" class="alert alert-warning" style="display: none"></div>
-                            <div id="successMessage" class="alert alert-success" style="display: none"></div>
-                            <form role="form" id="contactUs" class="form-validation" method="post">
-                                <div class="form-group">
-                                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" id="email" class="form-control" placeholder="your Email address" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="subject" class="form-control" placeholder="your Subject" required>
-                                </div>
-                                <div class="form-group">
-                                    <textarea rows="6" id="message" class="form-control" placeholder="your Message" required></textarea>
-                                </div>
-                                <button type="submit" id="submit" class="btn btn-sm btn-default pull-right"><span class="text-bold" translate="content.SEND">Send</span>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- footer -->
-    <footer id="footer">
-        <div class="bg-light dk">
-            <div class="container">
-                <div class="row padder-v m-t">
-                    <div class="col-xs-7">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="about.html" translate="footer.ABOUT_US">About Us</a>
-                            </li>
-                            <li>
-                                <a href="faq_customer.html" translate="footer.FAQ">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="buyer_protection.html" translate="footer.BUYER_PROTECTION_PROGRAM">Buyer Protection Program</a>
-                            </li>
-                            <li>
-                                <a href="return_refund.html" translate="footer.RETURN_POLICY">Return &amp; Refund Policy</a>
-                            </li>
-                            <li>
-                                <a href="merchant.html" class="text-base font-bold" translate="footer.SELL_ON_NEXTSHOPPER">Sell on Nextshopper?</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-5 text-right">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="term.html" translate="footer.TERM_OF_USE">Term of Use</a>
-                            </li>
-                            <li>
-                                <a href="privacy.html" translate="footer.PRIVACY_POLICY">Privacy Policy</a>
-                            </li>
-                            <li translate="footer.COPYRIGHT"> Nextshopper Inc. &copy; 2015</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- / footer -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/jquery_appear/jquery.appear.js"></script>
-    <script src="js/landing.js"></script>
-</body>
 
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="benefits" class="bg-white-only wrapper-lg">
+        <div class="container">
+            <div class="m-t m-b text-center wrapper">
+                <h3 class="text-black font-bold">Why NextShopper?</h3>
+            </div>
+            <div class="row m-t-l m-b-l text-center">
+                <div class="col-sm-4">
+                    <p class="h3 m-b-xl inline b b-dark rounded wrapper-lg">
+                        <i class="fa w-1x fa-globe"></i>
+                    </p>
+                    <div class="m-b-xl">
+                        <h4 class="m-t-none">Access global m-commerce market</h4>
+
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <p class="h3 m-b-xl inline b b-dark rounded wrapper-lg">
+                        <i class="fa w-1x fa-users"></i>
+                    </p>
+                    <div class="m-b-xl">
+                        <h4 class="m-t-none">Boost Sales, Earn Exposure</h4>
+                       
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <p class="h3 m-b-xl inline b b-dark rounded wrapper-lg">
+                        <i class="fa w-1x fa-usd"></i>
+                    </p>
+                    <div class="m-b-xl">
+                        <h4 class="m-t-none">$0 cost if you don't sell</h4>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="features" class="bg-light">
+  <div class="container">
+    <div class="row m-t-xl m-b-xxl">
+      <h3 class="text-black text-center font-bold m-b">Features</h3>
+      <div class="col-sm-6 wrapper-l">
+        <ul class="list-unstyled  m-t-xl">
+          <li>
+            <div class="pull-left m-r m-t-sm"><img src="img/one-minute-setup.png" width="80" height="80"></div>
+            <div class="clear m-b-lg text-md">
+              <h4 class="font-bold">Cloud Based Platform</h4>
+               No installation required, your store can be easily setup in a few minnutes.</div>
+          </li>
+          <li>
+            <div class="pull-left m-r m-t-sm"><img src="img/order-management.png" width="80" height="80"></div>
+            <div class="clear m-b-lg text-md">
+              <h4 class="font-bold">Fast and Easy Management</h4>
+              Cutting edge design makes order management on NextShopper a sheer joy!</div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6 wrapper-l">
+        <ul class="list-unstyled  m-t-xl">
+                    <li>
+            <div class="pull-left m-r m-t-sm"><img src="img/order-tracking.png" width="80" height="80"></div>
+            <div class="clear m-b-lg text-md">
+              <h4 class="font-bold">Powerful Tracking</h4>
+            Seamless inteteted with your prefer carriers, Your shipping is always on track.</div>
+          </li>
+          <li>
+            <div class="clear pull-left m-r m-t-sm"><img src="img/messaging-system.png" width="80" height="80"></div>
+            <div class="clear m-b-lg text-md">
+              <h4 class="font-bold">In App Messaging </h4>
+              No more email, Our  messaging system become a powerful customer support tool.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="download" class="bg-dark text-white">
+  <div class="container">
+    <div class="row m-t-xl m-b-xxl wrapper">
+      <div class="col-md-7">
+        <div class="text-md l-h-2x m-b-xl text-white">Between June 1, 2015 and July 31, 2015, NextShopper will have new merchant promotion， during the promotion, Frist 300 merchants will have 0% commission rate until end of year 2015, others will have 5% commission rate until end of year 2015</div> 
+        <div class="row clearfix">
+        <div class="col-sm-6">
+       <p class="font-bold m-b">Requirement</p>
+       <ul>
+       <li>Sign up merchant account</li>
+       <li>Complete store setup and provide all required information</li>
+       <li>list and active 10 or more products.</li>
+       </ul></div>
+       <div class="col-sm-6">
+<p class="font-bold m-b">Rules</p>
+<ul>
+<li>Comply NextShopper rules and policies;</li>
+<li>One store/account per person;</li>
+<li>no duplicates or fake listing;</li>
+
+</ul></div>
+     </div>
+      </div>
+      <div class="col-md-5">
+        <div class="text-center">
+        <div class="font-bold h3 m-b-xxl">申请入住, 免佣金！</div>
+        <h4 class="m-b-lg">输入邮箱地址获得注册邀请码</h4>
+          <div>
+          <form role="form" id="invitationCodeForm2" class="form-validation form-inline" method="post">
+            <div class="form-group">
+                <input type="email" id="inviteEmail2" class="form-control input-lg" placeholder="邮箱地址" required>
+              </div>
+              <button type="submit" id="submit" class="btn btn-default btn-lg"><span class="text-bold" translate="content.SEND">获取邀请码</span> </button>
+          </form>
+            <div class="alert alert-success" id="invitationCodeForm2-success"  style="display:none">
+                We have sent you an email with Invitation code.
+            </div>
+            <div class="alert alert-danger" id="invitationCodeForm2-fail" style="display:none">
+                Sorry!! We have some technical issue right now. <br/>
+                Please try again later.
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="contact" class="bg-white-only">
+  <div class="container">
+    <div class="row m-t-xl m-b-xxl">
+      <div class="col-sm-6 wrapper-l">
+        <h3 class="text-black font-bold m-b-lg">About Company</h3>
+ <p class="text-md m-b l-h-2x">NextShopper is a mobile shopping marketplace, based in Silicon Valley.  We want to build a flexible and transparent shopping environment. It sounds crazy but with help from Nextshopper platform,  buyer can receive more discounts and merchant can improve the sales margin.</p>
+                    <p class="text-md"> Your opinion is important to us. You are welcome to send us your issues ideas and suggestions.</p>
+                </div>
+      <div class="col-sm-6">
+        <div class="panel panel-default bg-light">
+          <div class="panel-body">
+            <h4 class=" font-bold m-b-md">联络我们</h4>
+            <div id="errorMessage" class="alert alert-warning" style="display: none"></div>
+            <div id="successMessage" class="alert alert-success" style="display: none"></div>
+            <form role="form" id="contactUs" class="form-validation" method="post">
+              <div class="form-group">
+                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" class="form-control" placeholder="Email address" required>
+              </div>
+              <div class="form-group">
+                <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea rows="6" id="message" class="form-control" placeholder="Message" required></textarea>
+              </div>
+              <button type="submit" id="submit" class="btn btn-sm btn-default pull-right"><span class="text-bold" translate="content.SEND">Send</span> </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- footer -->
+<footer id="footer">
+  <div class="bg-light dk">
+    <div class="container">
+      <div class="row padder-v m-t">
+        <div class="col-xs-5">
+          <ul class="list-inline">
+            <li><a href="about.html">About Us</a> </li>
+            <li><a href="faq_merchant.html">Merchant FAQ</a> </li>
+            
+          </ul>
+        </div>
+        <div class="col-xs-7 text-right">
+          <ul class="list-inline">
+            <li><a href="merchant_term.html">Term of services</a> </li>
+                        <li><a href="privacy.html">Privacy Policy</a> </li>
+            <li><a href="merchant_Policy.html">Merchant Policy</a> </li>
+            <li> Nextshopper Inc. &copy; 2015</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- / footer --> 
+<script src="bower_components/jquery/dist/jquery.min.js"></script> 
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script> 
+<script src="bower_components/jquery_appear/jquery.appear.js"></script> 
+<script src="js/landing.js"></script>
+</body>
 </html>
