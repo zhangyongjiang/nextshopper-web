@@ -1,10 +1,7 @@
 'use strict';
-angular.module('app', [
+var app = angular.module('app', [
     'ngCookies',
     'ngStorage',
     'pascalprecht.translate'
-])
-.config(['$logProvider', function($logProvider){
-    $logProvider.debugEnabled(true);
-}]);
+]);
 
