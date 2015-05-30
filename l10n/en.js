@@ -8,7 +8,8 @@
             "FEATURES": "Features",
             "HELP": "Help",
             "SIGN_IN": "Sign in",
-            "SIGN_UP": "Have Invitation Code?"
+            "SIGN_UP": "Have Invitation Code?",
+            "READY_TO_START": "Ready to start?"
     },
     "footer": {
         "ABOUT_US":"About us",

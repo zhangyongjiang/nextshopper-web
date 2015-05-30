@@ -8,7 +8,8 @@
             "FEATURES": "Features",
             "HELP": "Help",
             "SIGN_IN": "后台登录",
-            "SIGN_UP": "已有邀请码?"
+            "SIGN_UP": "已有邀请码?",
+            "READY_TO_START": "Ready to start?"
     },
     "footer": {
         "ABOUT_US":"About us",
