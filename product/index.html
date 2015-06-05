@@ -26,116 +26,129 @@
 </head>
 
 <body ng-controller="AppCtrl">
-    <div class="app" id="app">
-        <!-- navbar -->
-        <div data-ng-include=" 'tpl/blocks/header.html' " class="app-header navbar">
+    <header class="navbar navbar-fixed-top bg-white padder fa-border b-b">
+        <div class="container">
+            <div class="navbar-header font">
+                <button class="btn btn-link visible-xs pull-right m-r" type="button" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fa fa-bars"></i> </button>
+                <a href="index.html" class="navbar-brand"><img src="../img/logo.png" class="m-r-sm"> </a>
+            </div>
         </div>
-        <!-- / navbar -->
-        <!-- content -->
-        <div class="app-content m-n">
-            <div class="app-content-body fade-in-up">
-                <div class="wrapper-lg col-md-8 col-md-offset-2" ng-controller="ProductViewController" ng-show="product">
-                    <div class="row bg-white">
-                        <div class="col-md-6">
-                            <div class="wrapper-sm">
-                                <img ng-src="{{ product.product.imgs[0] | viewImage:500}}" class="b r r-2x img-responsive" alt="{{ 'seller.product.NO_PRODUCT_IMAGE' | translate }}">
-                            </div>
-                            <div class="wrapper text-center">
-                                <ul class="list inline">
-                                    <li ng-repeat="img in product.product.imgs" class="inline">
-                                        <img ng-src="{{ img | viewImage:25}}" class="b r r-2x img32" alt="{{ 'seller.product.NO_PRODUCT_IMAGE' | translate }}">
-                                    </li>
-                                </ul>
-                            </div>
+    </header>
+    <!-- content -->
+    <div class="bg clearfix m-t-lg">
+        <div class="container m-t">
+            <div class="wrapper-lg col-md-8 col-md-offset-2" ng-controller="ProductViewController">
+                <div class="row bg-white">
+                    <div class="col-md-6">
+                        <div class="wrapper-sm">
+                            <img ng-src="{{ product.product.imgs[0] | viewImage:500}}" class="b r r-2x img-responsive" alt="{{ 'seller.product.NO_PRODUCT_IMAGE' | translate }}">
                         </div>
-                        <div class="col-md-6">
-                            <div class="wrapper-sm">
-                                <div class="h3 m-b">
-                                    <span>{{product.product.name}}</span>
+                        <div class="wrapper text-center">
+                            <ul class="list inline">
+                                <li ng-repeat="img in product.product.imgs" class="inline">
+                                    <img ng-src="{{ img | viewImage:25}}" class="b r r-2x img32" alt="{{ 'seller.product.NO_PRODUCT_IMAGE' | translate }}">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="wrapper-sm">
+                            <div class="h3 m-b">
+                                <span>{{product.product.name}}</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <span>
+                        <i class="fa fa-heart-o"></i>
+                        {{product.product.likes}}
+                        <span>Likes</span>
+                                    </span>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <span>
-                            <i class="fa fa-heart-o"></i>
-                            {{product.product.likes}}
-                            <span>Likes</span>
-                                        </span>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <span>
-                            <i class="fa fa-comment-o"></i>
-                            {{product.reviews.length}}
-                            <span>Reviews</span>
-                                        </span>
-                                    </div>
+                                <div class="col-sm-6">
+                                    <span>
+                        <i class="fa fa-comment-o"></i>
+                        {{product.reviews.length}}
+                        <span>Reviews</span>
+                                    </span>
                                 </div>
-                                <div class="row h2 m-t">
-                                    <div class="col-sm-6 text-danger">
-                                        {{product.product.salePrice | viewCurrency}}
+                            </div>
+                            <div class="row h2 m-t">
+                                <div class="col-sm-6 text-danger">
+                                    {{product.product.salePrice | viewCurrency}}
+                                    <span>USD</span>
+                                </div>
+                                <div class="col-sm-6 text-muted">
+                                    <s>
+                                        {{product.product.listPrice | viewCurrency}}
                                         <span>USD</span>
-                                    </div>
-                                    <div class="col-sm-6 text-muted">
-                                        <s>
-                                            {{product.product.listPrice | viewCurrency}}
-                                            <span>USD</span>
-                                        </s>
-                                    </div>
+                                    </s>
                                 </div>
-                                <div class="row wrapper">
-                                    {{product.product.description}}
-                                </div>
-                                <div class="wrapper">
-                                    <div class="m-l-n">
-                                        <img ng-src="{{product.storeDetails.store.info.logo | viewImage:80}}" class="pull-left thumb-sm avatar m-l-xs img-circle">
-                                        <div class="m-l inline m-t-sm">
-                                            {{product.storeDetails.store.info.name}}
-                                        </div>
+                            </div>
+                            <div class="row wrapper">
+                                {{product.product.description}}
+                            </div>
+                            <div class="wrapper">
+                                <div class="m-l-n">
+                                    <img ng-src="{{product.storeDetails.store.info.logo | viewImage:80}}" class="pull-left thumb-sm avatar m-l-xs img-circle">
+                                    <div class="m-l inline m-t-sm">
+                                        {{product.storeDetails.store.info.name}}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 h3 text-center m-t-lg">
-                            <div class="wrapper-sm">
-                                Would you like to see more?
-                            </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h3 text-center m-t-lg">
+                        <div class="wrapper-sm">
+                            Would you like to see more?
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 h4 text-center">
-                            <div class="wrapper-sm">
-                                Download Nextshopper Free App.
-                            </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h4 text-center">
+                        <div class="wrapper-sm">
+                            Download Nextshopper Free App.
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 h4 text-center">
-                            <a href="#" target="_blank" class="text-sm btn btn-lg btn-rounded btn-default m-sm">
-                                <i class="fa fa-apple fa-3x pull-left m-l-sm"></i>
-                                <span class="block clear m-t-xs text-left m-r m-l">
-                                    <span>Coming Soon on the</span>
-                                <b class="text-lg block font-bold">App Store</b>
-                                </span>
-                            </a>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h4 text-center">
+                        <a href="#" target="_blank" class="text-sm btn btn-lg btn-rounded btn-default m-sm">
+                            <i class="fa fa-apple fa-3x pull-left m-l-sm"></i>
+                            <span class="block clear m-t-xs text-left m-r m-l">
+                                <span>Coming Soon on the</span>
+                            <b class="text-lg block font-bold">App Store</b>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- /content -->
-        <!-- footer -->
-        <div class="app-footer wrapper b-t bg-light">
-            <span class="pull-right">Copyright &copy; 2014 - 2015 Nextshopper Inc. <a href ui-scroll-to="app" class="m-l-sm text-muted"><i class="fa fa-long-arrow-up"></i></a></span>
-            <a href="http://www.nextshopper.com/merchant_term.html">
-                <span translate="seller.misc.TERM_SERVICES">Term Of Services</span>
-            </a> |
-            <a href="http://www.nextshopper.com/merchant_agreement.html">
-                <span translate="seller.misc.MERCHANT_AGREEMENT">Merchant Agreement</span>
-            </a>
-        </div>
-        <!-- / footer -->
     </div>
+    <!-- /content -->
+    <footer>
+        <div class="bg-light dk">
+            <div class="container">
+                <div class="row padder-v m-t">
+                    <div class="col-xs-4">
+                        <ul class="list-inline">
+                            <li><a href="about.html">About Us</a> </li>
+                            <li><a href="faq_merchant.html">Merchant FAQ</a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <ul class="list-inline">
+                            <li><a href="merchant_term.html">Term Of Services</a> </li>
+                            <li><a href="privacy.html">Privacy Policy</a> </li>
+                            <li><a href="merchant_policy.html">Merchant Policy</a> </li>
+                            <li> Nextshopper Inc. &copy; 2015</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- jQuery -->
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../bower_components/jquery/dist/jquery.cookie.js"></script>
