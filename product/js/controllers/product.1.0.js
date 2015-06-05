@@ -1,13 +1,22 @@
-app.controller('ProductViewController', ['$scope', 'NextShopperProductservice', '$stateParams', '$state', function($scope, NextShopperProductservice, $stateParams, $state) {
-    $scope.product = null;
-
-    NextShopperProductservice.getSingleProduct($stateParams.id)
+app.controller('ProductViewController', ['$scope', 'NextShopperProductservice', function($scope, NextShopperProductservice) {
+    $scope.product = false;
+    $scope.check = [];
+    $scope.check.productAvailable = false;
+    NextShopperProductservice.getSingleProduct(getParameterByName('productId'))
         .success(function(response){
             $scope.product = response;
+            $scope.check.productAvailable = true;
         })
         .error(function(response) {
-            $state.go('error.404');
+            console.log('Error');
+            window.location = '404.html';
         });
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
     }])
     .filter('cut', function() {
         return function(value, max, tail) {

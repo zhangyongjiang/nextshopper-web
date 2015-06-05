@@ -3,8 +3,8 @@
 /* Controllers */
 
 angular.module('app')
-    .controller('AppCtrl', ['$scope', '$translate', '$localStorage', '$window', '$timeout', '$state', 'NextShopperProductservice',
-        function($scope, $translate, $localStorage, $window, $timeout, $state, NextShopperProductservice) {
+    .controller('AppCtrl', ['$scope', '$translate', '$localStorage', '$window', '$timeout', 'NextShopperProductservice',
+        function($scope, $translate, $localStorage, $window, $timeout, NextShopperProductservice) {
             $scope.loaded = false;
             // add 'ie' classes to html
             var isIE = !!navigator.userAgent.match(/MSIE/i);
@@ -25,17 +25,6 @@ angular.module('app')
                     light: '#e8eff0',
                     dark: '#3a3f51',
                     black: '#1c2b36'
-                },
-                settings: {
-                    themeID: 1,
-                    navbarHeaderColor: 'bg-black',
-                    navbarCollapseColor: 'bg-white-only',
-                    asideColor: 'bg-black',
-                    headerFixed: true,
-                    asideFixed: false,
-                    asideFolded: true,
-                    asideDock: false,
-                    container: false
                 }
             }
 
@@ -45,8 +34,6 @@ angular.module('app')
             };
             $scope.langs = {
                 en: 'English',
-             //  de_DE: 'Deutsch',
-             //   it_IT: 'Italiano',
                 cn_CN: '中文'
             };
             $scope.selectLang = $scope.langs[$translate.proposedLanguage()] || "English";
@@ -67,13 +54,5 @@ angular.module('app')
                 return (/iPhone|iPod|iPad|Silk|Android|BlackBerry|Opera Mini|IEMobile/).test(ua);
             }
 
-            // $scope.$on('$viewContentLoaded', function() {
-            //     if($state.current.name == 'access.signin' ||  $state.current.name == 'access.signup' || $state.current.name == 'access.forgotpwd') {
-            //         $scope.loaded = false;    
-            //     }
-            //     if($localStorage.userId) {
-            //         $scope.loaded = false;
-            //     }
-            // });
         }
     ]);
