@@ -12,12 +12,10 @@ app.controller('StoreViewController', ['$scope', 'NextShopperProductservice', fu
         } else {
             NextShopperProductservice.getStore(getParameterByName('storeId'))
                 .success(function(response) {
-                    console.log(response);
                     $scope.store = response;
                     $scope.store.id = getParameterByName('storeId');
                     NextShopperProductservice.getStoreProducts($scope.store.id, $scope.productsParameters.search, $scope.productsParameters.size, $scope.productsParameters.offset)
                         .success(function(response) {
-                            console.log(response);
                             $scope.products = response.items;
                         })
                 })
