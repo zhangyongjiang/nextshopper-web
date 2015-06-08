@@ -35,6 +35,9 @@
         </div>
     </header>
     <!-- content -->
+    <script type="text/ng-template" id="CarouselImages.html">
+        <div ng-include="'tpl/ModalCarouselImages.html'"></div>
+    </script>
     <div class="bg clearfix m-t-lg">
         <div class="container m-t">
             <div class="wrapper-lg col-md-8 col-md-offset-2" ng-controller="ProductViewController">
@@ -45,9 +48,11 @@
                         </div>
                         <div class="wrapper text-center">
                             <ul class="list inline">
-                                <li ng-repeat="img in product.product.imgs" class="inline">
-                                    <img ng-src="{{ img | viewImage:25}}" class="b r r-2x img32" alt="{{ 'seller.product.NO_PRODUCT_IMAGE' | translate }}">
-                                </li>
+                                <a ng-click="viewCarousel(product.product.imgs)">
+                                    <li ng-repeat="img in product.product.imgs" class="inline m-r-xs b b-dark r">
+                                        <img ng-src="{{ img | viewImage:25}}" class="img32" alt="{{ 'seller.product.NO_PRODUCT_IMAGE' | translate }}">
+                                    </li>
+                                </a>
                             </ul>
                         </div>
                     </div>

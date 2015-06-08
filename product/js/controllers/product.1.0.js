@@ -1,22 +1,49 @@
-app.controller('ProductViewController', ['$scope', 'NextShopperProductservice', function($scope, NextShopperProductservice) {
-    $scope.product = false;
-    $scope.check = [];
-    $scope.check.productAvailable = false;
-    NextShopperProductservice.getSingleProduct(getParameterByName('productId'))
-        .success(function(response){
-            $scope.product = response;
-            $scope.check.productAvailable = true;
-        })
-        .error(function(response) {
-            console.log('Error');
-            window.location = '404.html';
-        });
+app.controller('ProductViewController', ['$scope', 'NextShopperProductservice', '$modal', function($scope, NextShopperProductservice, $modal) {
+        $scope.product = false;
+        $scope.check = [];
+        $scope.check.productAvailable = false;
+        NextShopperProductservice.getSingleProduct(getParameterByName('productId'))
+            .success(function(response) {
+                $scope.product = response;
+                $scope.check.productAvailable = true;
+            })
+            .error(function(response) {
+                console.log('Error');
+                window.location = '404.html';
+            });
+
         function getParameterByName(name) {
             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
                 results = regex.exec(location.search);
             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
+        $scope.viewCarousel = function(images) {
+            var modalInstance = $modal.open({
+                templateUrl: 'CarouselImages.html',
+                controller: 'CarouselImageModalController',
+                size: 'md',
+                resolve: {
+                    items: function() {
+                        return images;
+                    }
+                }
+            });
+        }
+    }])
+    .controller('CarouselImageModalController', ['$scope', 'NextShopperProductservice', '$modalInstance', 'items', function($scope, NextShopperProductservice, $modalInstance, items) {
+        $scope.interval = 5000;
+        $scope.index = 0;
+        $scope.slides = [];
+        angular.forEach(items, function(item, index) {
+             $scope.slides.push({
+                image: item,
+                active: ($scope.index != index) ? false : true
+            });
+        });
+        $scope.cancel = function() {
+            $modalInstance.dismiss('cancel');
+        };
     }])
     .filter('cut', function() {
         return function(value, max, tail) {
@@ -76,7 +103,12 @@ app.controller('ProductViewController', ['$scope', 'NextShopperProductservice', 
                 return value;
             }
             var resourcePath = "https://api.nextshopper.com/ws/resource/download?path=";
-            var width = size || 100;
+            var width = 0;
+            if(angular.isUndefined(size)){
+                width = 100;
+            }else{
+                width = size;
+            }
             if (!value) return '';
             if (size == 0) {
                 resourcePath = resourcePath + value;

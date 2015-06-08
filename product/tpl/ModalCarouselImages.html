@@ -1,0 +1,17 @@
+<div class="wrapper-sm">
+    <button type="button" class="close" ng-click="cancel()">&times;</button>
+</div>
+<div class="modal-body wrapper-lg">
+    <!-- carousel -->
+    <div class="panel b-a" set-ng-animate="false">
+        <carousel interval="interval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <div>
+                    <img ng-src="{{slide.image | viewImage:0}}" class="img700x600">
+                </div>
+                
+            </slide>
+        </carousel>
+    </div>
+    <!-- / carousel -->
+</div>

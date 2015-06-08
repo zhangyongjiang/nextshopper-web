@@ -20,9 +20,8 @@ app.controller('StoreViewController', ['$scope', 'NextShopperProductservice', fu
                         })
                 })
                 .error(function(response) {
-                    console.log(response);
-                    // console.log('Error');
-                    //window.location = '404.html';
+                    console.log('Error');
+                    window.location = '404.html';
                 });
         }
 
