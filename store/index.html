@@ -49,35 +49,27 @@
                         <p>{{store.summary}}</p>
                         <p>{{store.website}}</p>
                         <p>
-                            <i class="fa fa-map-marker"></i>
-                            {{store.address.addr1}}<br/>
-                            {{store.address.city}} 
-                            {{store.address.state}}, 
-                            {{store.address.zipcode}} 
-                            {{store.address.country}} 
+                            <i class="fa fa-map-marker"></i> {{store.address.addr1}}
+                            <br/> {{store.address.city}} {{store.address.state}}, {{store.address.zipcode}} {{store.address.country}}
                         </p>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <ul class="inline">
-                        <li class="inline b m-r m-b-sm r-2x" ng-repeat="product in products" style="min-height: 250px">
-                            <div class="m">
-                                <div class="wrapper-sm">
-                                    <a href="/product/index.html?productId={{product.id}}">
-                                        <img ng-src="{{ product.imgs[0] | viewImage:500}}" class="b img150 r r-2x img-responsive">
-                                    <div style="width: 150px">{{product.name}}</div>
-                                    </a>
-                                    <img ng-src="{{ store.logo | viewImage:100}}" class="b r r-2x img-responsive avatar thumb-xs">
-                                    <div>Shared By:</div>
-                                    <div>{{store.name}}</div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <div class="clearfix"></div>
+                <ul class="inline col-md-12">
+                    <li class="inline b r-2x wrapper-sm m" ng-repeat="product in products">
+                        <div>
+                            <a href="/product/index.html?productId={{product.id}}">
+                                <img ng-src="{{ product.imgs[0] | viewImage:500}}" class="b img150 r r-2x img-responsive">
+                                <div style="width: 150px">{{product.name | cut:50}}</div>
+                            </a>
+                            <img ng-src="{{ store.logo | viewImage:100}}" class="b r r-2x img-responsive avatar thumb-xs">
+                            <div>Shared By:</div>
+                            <div>{{store.name}}</div>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="row bg-white">
-                
             </div>
         </div>
     </div>
