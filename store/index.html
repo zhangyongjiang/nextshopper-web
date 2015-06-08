@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+
+<head>
+    <meta charset="utf-8" />
+    <title> NextShopper | NextShopper Web App</title>
+    <meta name="description" content="Angularjs, Html5, Music, Landing, 4 in 1 ui kits package" />
+    <meta name="keywords" content="AngularJS, angular, bootstrap, admin, dashboard, panel, app, charts, components,flat, responsive, layout, kit, ui, route, web, app, widgets" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="../bower_components/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/font.css" type="text/css" />
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+    <script type="text/javascript">
+    function getApiBase() {
+        var host = window.location.hostname;
+        if (host.indexOf('127.0.0.1') != -1)
+            return "http://127.0.0.1:9090/api";
+        else
+            return "http://api.onsalelocal.com";
+    }
+    </script>
+</head>
+
+<body ng-controller="AppCtrl">
+    <header class="navbar navbar-fixed-top bg-white padder fa-border b-b">
+        <div class="container">
+            <div class="navbar-header font">
+                <button class="btn btn-link visible-xs pull-right m-r" type="button" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fa fa-bars"></i> </button>
+                <a href="/" class="navbar-brand"><img src="../img/logo.png" class="m-r-sm"> </a>
+            </div>
+        </div>
+    </header>
+    <!-- content -->
+    <div class="container wrapper m-t-lg">
+        <div class="m-t" ng-controller="StoreViewController">
+            <div class="row bg-white">
+                <div class="col-md-2">
+                    <div class="wrapper-sm text-center">
+                        <img ng-src="{{ store.logo | viewImage:500}}" class="b r r-2x thumb-lg img-responsive" alt="{{ 'seller.store.NO_STORE_LOGO' | translate }}">
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="wrapper-sm">
+                        <span class="h3">{{store.name}}</span>
+                        <p>{{store.summary}}</p>
+                        <p>{{store.website}}</p>
+                        <p>
+                            <i class="fa fa-map-marker"></i>
+                            {{store.address.addr1}}<br/>
+                            {{store.address.city}} 
+                            {{store.address.state}}, 
+                            {{store.address.zipcode}} 
+                            {{store.address.country}} 
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <ul class="inline">
+                        <li class="inline b m-r m-b-sm r-2x" ng-repeat="product in products" style="min-height: 250px">
+                            <div class="m">
+                                <div class="wrapper-sm">
+                                    <a href="/product/index.html?productId={{product.id}}">
+                                        <img ng-src="{{ product.imgs[0] | viewImage:500}}" class="b img150 r r-2x img-responsive">
+                                    <div style="width: 150px">{{product.name}}</div>
+                                    </a>
+                                    <img ng-src="{{ store.logo | viewImage:100}}" class="b r r-2x img-responsive avatar thumb-xs">
+                                    <div>Shared By:</div>
+                                    <div>{{store.name}}</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row bg-white">
+                
+            </div>
+        </div>
+    </div>
+    <!-- /content -->
+    <footer>
+        <div class="bg-light dk">
+            <div class="container">
+                <div class="row padder-v m-t">
+                    <div class="col-xs-4">
+                        <ul class="list-inline">
+                            <li><a href="about.html">About Us</a> </li>
+                            <li><a href="faq_merchant.html">Merchant FAQ</a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <ul class="list-inline">
+                            <li><a href="merchant_term.html">Term Of Services</a> </li>
+                            <li><a href="privacy.html">Privacy Policy</a> </li>
+                            <li><a href="merchant_policy.html">Merchant Policy</a> </li>
+                            <li> Nextshopper Inc. &copy; 2015</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.cookie.js"></script>
+    <!-- Angular -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../bower_components/angular-touch/angular-touch.js"></script>
+    <script src="../bower_components/ngstorage/ngStorage.js"></script>
+    <!-- bootstrap -->
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- translate -->
+    <script src="../bower_components/angular-translate/angular-translate.js"></script>
+    <script src="../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="../bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="../bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+    <!-- App -->
+    <script src="js/app.1.0.js"></script>
+    <script src="js/config.1.0.js"></script>
+    <script src="js/main.1.0.js"></script>
+    <script src="js/controllers/bootstrap.js"></script>
+    <script src="js/services/store.1.0.js"></script>
+    <script src="js/directives/store.1.0.js"></script>
+    <script src="js/controllers/store.1.0.js"></script>
+    <!-- Lazy loading -->
+</body>
+
+</html>

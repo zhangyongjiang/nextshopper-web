@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title> NextShopper | NextShopper Web App</title>
+    <meta name="description" content="Angularjs, Html5, Music, Landing, 4 in 1 ui kits package" />
+    <meta name="keywords" content="AngularJS, angular, bootstrap, admin, dashboard, panel, app, charts, components,flat, responsive, layout, kit, ui, route, web, app, widgets" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="../bower_components/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/font.css" type="text/css" />
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+    <script type="text/javascript">
+    function getApiBase() {
+        var host = window.location.hostname;
+        if (host.indexOf('127.0.0.1') != -1)
+            return "http://127.0.0.1:9090/api";
+        else
+            return "https://api.nextshopper.com";
+    }
+    </script>
+</head>
+
+<body>
+    <div class="app" id="app" ng-class="{'app-header-fixed':false, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}">
+        <!-- navbar -->
+        <div data-ng-include=" 'tpl/blocks/header.html' " class="app-header navbar">
+        </div>
+        <!-- / navbar -->
+        <!-- content -->
+        <div class="app-content m-n">
+            <div ui-butterbar></div>
+            <a href class="off-screen-toggle hide" ui-toggle-class="off-screen" data-target=".app-aside"></a>
+            <div class="app-content-body fade-in-up">
+                <div class="container w-xxl w-auto-xs" ng-init="app.settings.container = false;">
+                    <div class="text-center m-b-lg">
+                        <h1 class="text-shadow text-white">404</h1>
+                    </div>
+                    <div class="text-center" ng-include="'tpl/blocks/page_footer.html'"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /content -->
+        <!-- footer -->
+        <div class="app-footer wrapper b-t bg-light">
+            <span class="pull-right">Copyright &copy; 2014 - 2015 Nextshopper Inc. <a href ui-scroll-to="app" class="m-l-sm text-muted"><i class="fa fa-long-arrow-up"></i></a></span>
+            <a href="http://www.nextshopper.com/merchant_term.html">
+                <span translate="seller.misc.TERM_SERVICES">Term Of Services</span>
+            </a> |
+            <a href="http://www.nextshopper.com/merchant_agreement.html">
+                <span translate="seller.misc.MERCHANT_AGREEMENT">Merchant Agreement</span>
+            </a>
+        </div>
+        <!-- / footer -->
+    </div>
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.cookie.js"></script>
+    <!-- Angular -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../bower_components/angular-touch/angular-touch.js"></script>
+    <script src="../bower_components/ngstorage/ngStorage.js"></script>
+    <!-- bootstrap -->
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- translate -->
+    <script src="../bower_components/angular-translate/angular-translate.js"></script>
+    <script src="../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="../bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="../bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+    <!-- App -->
+    <script src="js/app.1.0.js"></script>
+    <script src="js/config.1.0.js"></script>
+    <script src="js/main.1.0.js"></script>
+    <script src="js/controllers/bootstrap.js"></script>
+    <script src="js/services/store.1.0.js"></script>
+    <script src="js/directives/store.1.0.js"></script>
+    <script src="js/controllers/store.1.0.js"></script>
+    <!-- Lazy loading -->
+</body>
+
+</html>
