@@ -19,6 +19,8 @@
         var host = window.location.hostname;
         if (host.indexOf('127.0.0.1') != -1)
             return "http://127.0.0.1:9090/api";
+        else if (host.indexOf('nextshopper.com') != -1)
+            return "https://api.nextshopper.com";
         else
             return "http://api.onsalelocal.com";
     }
