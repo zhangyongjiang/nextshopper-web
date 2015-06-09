@@ -15,15 +15,15 @@
     <link rel="stylesheet" href="css/app.css" type="text/css" />
     <link rel="stylesheet" href="css/custom.css" type="text/css" />
     <script type="text/javascript">
-    function getApiBase() {
-        var host = window.location.hostname;
-        if (host.indexOf('127.0.0.1') != -1)
-            return "http://127.0.0.1:9090/api";
-        else if (host.indexOf('nextshopper.com') != -1)
-            return "https://api.nextshopper.com";
-        else
-            return "http://api.onsalelocal.com";
-    }
+        function getApiBase() {
+            var host = window.location.hostname;
+            if (host.indexOf('127.0.0.1') != -1)
+                return "http://127.0.0.1:9090/api";
+            else if (host.indexOf('nextshopper.com') != -1)
+                return "https://api.nextshopper.com";
+            else
+                return "http://api.onsalelocal.com";
+        }
     </script>
 </head>
 
