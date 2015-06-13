@@ -14,9 +14,14 @@
     <link rel="stylesheet" href="css/font.css" type="text/css" />
     <link rel="stylesheet" href="css/app.css" type="text/css" />
     <script src="js/analytics.js"></script>
+    <style type="text/css">
+    [ng-cloak] {
+        display: none;
+    }
+    </style>
 </head>
 
-<body id="merchant" ng-controller="AppCtrl">
+<body id="merchant" ng-controller="AppCtrl" ng-cloak>
     <!-- header -->
     <header id="header" class="navbar navbar-fixed-top bg-white-opacity padder-v fa-border b-b">
         <div class="container">
@@ -28,8 +33,7 @@
                 <ul class="nav navbar-nav navbar-right font-bold">
                     <li>
                         <a href data-toggle="dropdown" class="dropdown-toggle">
-                            <i class="fa w-1x fa-language"></i>
-                            {{selectLang}}
+                            <i class="fa w-1x fa-language"></i> {{selectLang}}
                             <b class="caret"></b>
                         </a>
                         <!-- dropdown -->
@@ -59,16 +63,22 @@
                 <div class="row padder-v m-t">
                     <div class="col-xs-4">
                         <ul class="list-inline">
-                            <li><a href="about.html">About Us</a> </li>
-                            <li><a href="faq_merchant.html">Merchant FAQ</a> </li>
+                            <li><a href="about.html">{{ 'footer.ABOUT_US' | translate }}</a> </li>
+                            <li><a href="faq_merchant.html">{{ 'footer.MERCHANT_FAQ' | translate }}</a> </li>
                         </ul>
                     </div>
                     <div class="col-xs-8 text-right">
                         <ul class="list-inline">
-                            <li><a href="merchant_term.html">Term Of Services</a> </li>
-                            <li><a href="privacy.html">Privacy Policy</a> </li>
-                            <li><a href="merchant_policy.html">Merchant Policy</a> </li>
-                            <li> Nextshopper Inc. &copy; 2015</li>
+                            <li>
+                                <a href="merchant_term.html">{{ 'footer.TERM_OF_SERVICE' | translate }}</a>
+                            </li>
+                            <li>
+                                <a href="privacy.html">{{ 'footer.PRIVACY_POLICY' | translate }}</a>
+                            </li>
+                            <li>
+                                <a href="merchant_policy.html">{{ 'footer.MERCHANT_POLICY' | translate }}</a>
+                            </li>
+                            <li> {{ 'footer.COPYRIGHT' | translate }}</li>
                         </ul>
                     </div>
                 </div>
