@@ -3,26 +3,26 @@
         "NAME": "NextShopper"
     },
     "header": {
-            "HOME": "Home",
-            "WHY_US": "Why us",
-            "FEATURES": "Features",
-            "HELP": "Help",
+            "HOME": "首页",
+            "WHY_US": "我们",
+            "FEATURES": "特色",
+            "HELP": "帮助",
             "SIGN_IN": "后台登录",
             "SIGN_UP": "已有邀请码?",
-            "READY_TO_START": "Ready to start?"
+            "READY_TO_START": "开始注册?"
     },
     "footer": {
-        "ABOUT_US":"About us",
-        "FAQ":"FAQ",
-        "MERCHANT_FAQ":"Merchant FAQ",
-        "TERM_OF_SERVICE":"Term Of Services",
-        "BUYER_PROTECTION_PROGRAM":"Buyer Protection Program",
-        "RETURN_POLICY":"Return &amp; Refund Policy",
-        "SELL_ON_NEXTSHOPPER":"Sell on Nextshopper?",
-        "TERM_OF_USE":"Term of Use",
-        "PRIVACY_POLICY":"Privacy Policy",
-        "MERCHANT_POLICY":"Merchant Policy",
+        "ABOUT_US":"关于我们",
+        "FAQ":"常见问题",
+        "MERCHANT_FAQ":"商家常见问题",
+        "TERM_OF_SERVICE":"服务协议",
+        "BUYER_PROTECTION_PROGRAM":"买家保护计划",
+        "RETURN_POLICY":"退货与退款政策",
+        "SELL_ON_NEXTSHOPPER":"在NextShopper开店?",
+        "TERM_OF_USE":"服务协议",
+        "PRIVACY_POLICY":"隐私政策",
+        "MERCHANT_POLICY":"商家政策",
         "COPYRIGHT":"Nextshopper Inc. &copy; 2015",
-        "DOWNLOAD_APP":"download App?"
+        "DOWNLOAD_APP":"下载应用?"
     }
 }
