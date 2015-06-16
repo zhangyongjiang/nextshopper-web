@@ -17,7 +17,7 @@ angular.module('app')
             // angular translate
             $scope.langs = {
                 en: 'English',
-                cn_CN: 'Chinese'
+                cn_CN: '中文'
             };
             $scope.selectLang = $scope.langs[$translate.proposedLanguage()] || "English";
             if(angular.isDefined($translate.proposedLanguage())){
