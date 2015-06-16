@@ -14,14 +14,14 @@
     "footer": {
         "ABOUT_US":"关于我们",
         "FAQ":"常见问题",
-        "MERCHANT_FAQ":"商家常见问题",
+        "MERCHANT_FAQ":"常见问题",
         "TERM_OF_SERVICE":"服务协议",
-        "BUYER_PROTECTION_PROGRAM":"买家保护计划",
+        "BUYER_PROTECTION_PROGRAM":"消费者保护计划",
         "RETURN_POLICY":"退货与退款政策",
         "SELL_ON_NEXTSHOPPER":"在NextShopper开店?",
         "TERM_OF_USE":"服务协议",
         "PRIVACY_POLICY":"隐私政策",
-        "MERCHANT_POLICY":"商家政策",
+        "MERCHANT_POLICY":"商户规则",
         "COPYRIGHT":"Nextshopper Inc. &copy; 2015",
         "DOWNLOAD_APP":"下载应用?"
     }
