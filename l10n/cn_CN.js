@@ -22,7 +22,7 @@
         "TERM_OF_USE":"服务协议",
         "PRIVACY_POLICY":"隐私政策",
         "MERCHANT_POLICY":"商户规则",
-        "COPYRIGHT":"Nextshopper Inc. &copy; 2015",
+        "COPYRIGHT":"Nextshopper Inc. © 2015",
         "DOWNLOAD_APP":"下载应用?"
     }
 }

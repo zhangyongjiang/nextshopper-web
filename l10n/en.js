@@ -22,7 +22,7 @@
         "TERM_OF_USE":"Term of Use",
         "PRIVACY_POLICY":"Privacy Policy",
         "MERCHANT_POLICY":"Merchant Policy",
-        "COPYRIGHT":"Nextshopper Inc. &copy; 2015",
+        "COPYRIGHT":"Nextshopper Inc. © 2015",
         "DOWNLOAD_APP":"download App?"
     }
 }
