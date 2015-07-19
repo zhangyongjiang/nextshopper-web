@@ -3949,6 +3949,9 @@ a.text-#000000:hover {
 #merchant .bg {
 background: url("../img/bg3.jpg")  repeat-x top center;
 }
+#promo .bg-icon {
+background: url("../img/icon_bg.jpg")  repeat-x top center;
+}
 }
 
 .fa-chain {
