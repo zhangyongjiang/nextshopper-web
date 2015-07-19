@@ -3949,15 +3949,15 @@ a.text-#000000:hover {
 #merchant .bg {
 background: url("../img/bg3.jpg")  repeat-x top center;
 }
-.bg-icon {
-background: url("../img/icon_bg.png")  repeat-x top center;
-}
+
 }
 
 .fa-chain {
   color:#FF6266;
 }
-
+.bg-icon {
+background: url("../img/icon_bg.png")  repeat-x top center;
+}
 .bg-red  {
 background-color:#FF6266;
 }
