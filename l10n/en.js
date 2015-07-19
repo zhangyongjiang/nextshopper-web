@@ -7,8 +7,8 @@
             "WHY_US": "Why us",
             "FEATURES": "Features",
             "HELP": "Help",
-            "SIGN_IN": "Sign in",
-            "SIGN_UP": "Have Invitation Code?",
+            "SIGN_IN": "Sign In",
+            "SIGN_UP": "Sign Up",
             "READY_TO_START": "Ready to start?"
     },
     "footer": {

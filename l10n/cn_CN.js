@@ -8,7 +8,7 @@
             "FEATURES": "特色",
             "HELP": "帮助",
             "SIGN_IN": "后台登录",
-            "SIGN_UP": "已有邀请码?",
+            "SIGN_UP": "注册账号",
             "READY_TO_START": "开始注册?"
     },
     "footer": {
