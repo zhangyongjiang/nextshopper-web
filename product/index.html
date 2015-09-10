@@ -184,6 +184,19 @@
     <script src="js/directives/product.1.0.js"></script>
     <script src="js/controllers/product.1.0.js"></script>
     <!-- Lazy loading -->
+
+    <script type="text/javascript">
+        function getParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        var frame = document.createElement('iframe');
+        frame.src = 'nextshopper://product/' + getpatameterByName("productId");
+        frame.style.display = 'none';
+        document.body.appendChild(frame);
+    </script>
+
 </body>
 
 </html>
