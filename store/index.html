@@ -125,6 +125,18 @@
     <script src="js/directives/store.1.0.js"></script>
     <script src="js/controllers/store.1.0.js"></script>
     <!-- Lazy loading -->
+    <script type="text/javascript">
+        function getParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        var frame = document.createElement('iframe');
+        frame.src = 'nextshopper://store/' + getpatameterByName("storeId");
+        frame.style.display = 'none';
+        document.body.appendChild(frame);
+    </script>
 </body>
 
 </html>
+
