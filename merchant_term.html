@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 
 <head>
     <meta charset="utf-8" />
@@ -18,21 +18,35 @@
 
 <body id="Merchant_term" class="bg-light">
     <!-- header -->
-<header id="header" class="navbar navbar-fixed-top bg-white-opacity padder-v fa-border b-b">
-  <div class="container">
-    <div class="navbar-header font">
-      <button class="btn btn-link visible-xs pull-right m-r" type="button" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fa fa-bars"></i> </button>
-      <a href="index.html" class="navbar-brand"><img src="img/logo.png" class="m-r-sm"> </a> </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right font-bold">
-      <li>
-               <div class="btn btn-rounded m-t-xs btn-red">         <a href="https://seller.nextshopper.com/#/access/signup">Have Invitation Code?</a></div>
+    <header id="header" class="navbar navbar-fixed-top bg-white-opacity padder-v fa-border b-b">
+        <div class="container">
+            <div class="navbar-header font">
+                <button class="btn btn-link visible-xs pull-right m-r" type="button" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fa fa-bars"></i> </button>
+                <a href="index.html" class="navbar-brand"><img src="img/logo.png" class="m-r-sm"> </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right font-bold">
+                    <li>
+                        <a href data-toggle="dropdown" class="dropdown-toggle">
+                            <i class="fa w-1x fa-language"></i> {{selectLang}}
+                            <b class="caret"></b>
+                        </a>
+                        <!-- dropdown -->
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="(langKey, label) in langs">
+                                <a ng-click="setLang(langKey, $event)" href>{{label}}</a>
+                            </li>
+                        </ul>
+                        <!-- / dropdown -->
                     </li>
-        <li><a href="https://seller.nextshopper.com/">Sign In</a> </li>
-      </ul>
-    </div>
-  </div>
-</header>
+                    <li>
+                        <div class="btn btn-rounded m-t-xs btn-red"> <a href="https://seller.nextshopper.com/#/access/signup">{{ 'header.SIGN_UP' | translate }}</a></div>
+                    </li>
+                    <li><a href="https://seller.nextshopper.com/">{{ 'header.SIGN_IN' | translate }}</a> </li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <!-- / header -->
     <div id="content" class="bg-light clearfix">
         <div class="container m-t-xxl m-b-xxl">
@@ -362,6 +376,16 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/jquery_appear/jquery.appear.js"></script>
+    <!-- translate -->
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="./bower_components/ngstorage/ngStorage.js"></script>
+    <script src="./bower_components/angular-translate/angular-translate.js"></script>
+    <script src="./bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="./bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="./bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
     <script src="js/landing.js"></script>
 </body>
 
