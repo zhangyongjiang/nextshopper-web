@@ -3927,7 +3927,13 @@ a.text-#000000:hover {
     }
 }
 #index .bg {
-	background: url("../img/bg1.png")  repeat-x top center;
+	background: url("../img/bg1.png");
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-width: 0;
+    min-height: 600px;
+    width: auto;
 }
 .transparent-bg-only {
     background-color: transparent !important;
@@ -3938,7 +3944,7 @@ a.text-#000000:hover {
 }
 .mobile-image {
     position: relative;
-    bottom: -250px;
+/*    bottom: -250px;*/
 	vertical-align:bottom;
 }
 @media (max-width: 900px) {
