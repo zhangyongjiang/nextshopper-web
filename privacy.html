@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -18,31 +18,23 @@
 
 <body id="privacy" class="bg-light">
     <!-- header -->
-    <header id="header" class="navbar navbar-fixed-top bg-white-opacity padder-v fa-border b-b">
+    <header id="header" class="navbar navbar-fixed-top bg-white-opacity padder-v fa-border">
         <div class="container">
-            <div class="navbar-header font">
-                <button class="btn btn-link visible-xs pull-right m-r" type="button" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fa fa-bars"></i> </button>
-                <a href="index.html" class="navbar-brand"><img src="img/logo.png" class="m-r-sm"> </a>
+            <div class="navbar-header">
+                <button class="btn btn-link visible-xs pull-right m-r" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a href="index.html" class="navbar-brand"><img src="img/logo.png" class="m-r-sm">
+                </a>
             </div>
             <div class="collapse navbar-collapse">
+                
                 <ul class="nav navbar-nav navbar-right font-bold">
                     <li>
-                        <a href data-toggle="dropdown" class="dropdown-toggle">
-                            <i class="fa w-1x fa-language"></i> {{selectLang}}
-                            <b class="caret"></b>
-                        </a>
-                        <!-- dropdown -->
-                        <ul class="dropdown-menu">
-                            <li ng-repeat="(langKey, label) in langs">
-                                <a ng-click="setLang(langKey, $event)" href>{{label}}</a>
-                            </li>
-                        </ul>
-                        <!-- / dropdown -->
+               <div class="btn btn-rounded m-t-xs btn-red"> <a href="https://itunes.apple.com/us/app/next-shopper/id963231875?mt=8">Download App</a></div>
                     </li>
-                    <li>
-                        <div class="btn btn-rounded m-t-xs btn-red"> <a href="https://seller.nextshopper.com/#/access/signup">{{ 'header.SIGN_UP' | translate }}</a></div>
+                    <li><a href="https://seller.nextshopper.com">Become a seller?</a>
                     </li>
-                    <li><a href="https://seller.nextshopper.com/">{{ 'header.SIGN_IN' | translate }}</a> </li>
                 </ul>
             </div>
         </div>
@@ -147,44 +139,50 @@
         </div>
     </div>
 <!-- footer -->
-<footer id="footer">
-  <div class="bg-light dk">
-    <div class="container">
-      <div class="row padder-v m-t">
-        <div class="col-xs-4">
-          <ul class="list-inline">
-            <li><a href="about.html">About Us</a> </li>
-            <li><a href="faq_merchant.html">Merchant FAQ</a> </li>
-            
-          </ul>
+   <footer id="footer">
+        <div class="bg-light dk">
+            <div class="container">
+                <div class="row padder-v m-t">
+                    <div class="col-xs-7">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="about.html" translate="footer.ABOUT_US">About Us</a>
+                            </li>
+                            <li>
+                                <a href="faq_customer.html" translate="footer.FAQ">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="buyer_protection.html" translate="footer.BUYER_PROTECTION_PROGRAM">Buyer Protection Program</a>
+                            </li>
+                            <li>
+                                <a href="return_refund.html" translate="footer.RETURN_POLICY">Return &amp; Refund Policy</a>
+                            </li>
+                            <li>
+                                <a href="https://seller.nextshopper.com" class="text-base font-bold" translate="footer.SELL_ON_NEXTSHOPPER">Sell on Nextshopper?</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-5 text-right">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="term.html" translate="footer.TERM_OF_USE">Term of Use</a>
+                            </li>
+                            <li>
+                                <a href="privacy.html" translate="footer.PRIVACY_POLICY">Privacy Policy</a>
+                            </li>
+                            <li translate="footer.COPYRIGHT"> Nextshopper Inc. &copy; 2015</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-xs-8 text-right">
-          <ul class="list-inline">
-            <li><a href="merchant_term.html">Term Of Services</a> </li>
-                        <li><a href="privacy.html">Privacy Policy</a> </li>
-            <li><a href="merchant_policy.html">Merchant Policy</a> </li>
-            <li> Nextshopper Inc. &copy; 2015</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 <!-- / footer --> 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/jquery_appear/jquery.appear.js"></script>
     <!-- translate -->
-    <script src="./bower_components/angular/angular.js"></script>
-    <script src="./bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="./bower_components/ngstorage/ngStorage.js"></script>
-    <script src="./bower_components/angular-translate/angular-translate.js"></script>
-    <script src="./bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
-    <script src="./bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
-    <script src="./bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/landing.js"></script>
+ 
 </body>
 
 </html>
