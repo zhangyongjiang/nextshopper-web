@@ -2312,8 +2312,8 @@ html {
     background-color: #edf1f2;
 }
 .bg-dark {
-    color: #BE1522;
-  background-color:#F24840;
+    color: #fff;
+  background-color:#BE1522;
 }
 .bg-dark.lt, .bg-dark .lt {
     background-color: #474c5e;
