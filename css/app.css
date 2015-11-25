@@ -3959,19 +3959,19 @@ background: url("../img/bg3.jpg")  repeat-x top center;
 }
 
 .fa-chain {
-  color:#FF6266;
+  color:#BE1522;
 }
 .bg-icon {
 background: url("../img/icon_bg.png")  repeat-x top center;
 }
 .bg-red  {
-background-color:#FF6266;
+background-color:#BE1522;
 }
 
 .btn-red {
   color: #ffffff !important;
-  background-color: #FF6266;
-  border-color: #FF6266;
+  background-color: #be1522;
+  border-color: #BE1522;
 }
 .btn-red a { color:white;  padding:8px;}
 .btn-red:hover,
