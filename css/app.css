@@ -703,7 +703,7 @@ body {
     text-decoration: none;
 }
 .navbar-brand img {
-    display: inline;
+   /* display: inline; */
     max-height: 40px;
     margin-top: 5px;
     vertical-align: middle;
